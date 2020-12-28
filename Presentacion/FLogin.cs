@@ -86,15 +86,19 @@ namespace Presentacion
             {
                 if(TxtPass.Text != "Contraseña")                            //Si el Txt de usuario y password esta lleno
                 {
-                    if(TxtUser.Text == "Admin" && TxtPass.Text == "Admin")  //Si la busqueda en BDD coincide
+                    ModeloUsuario user = new ModeloUsuario();
+                    var LoginValido = user.LoginUser(TxtUser.Text, TxtPass.Text);
+                    if (LoginValido==true)
                     {
-                        FInicio mainMenu = new FInicio();                   //Accede a la Pag de inicio
-                        mainMenu.Show();
+                        FInicio Inicio = new FInicio();
+                        Inicio.Show();
                         this.Hide();
                     }
-                    else                                                     //Si la busqueda no coincide
+                    else
                     {
-                        msgError("Usuario o contraseña incorrecta");         
+                        msgError("Usuario o contraseña incorrectos");
+                        TxtPass.Clear();
+                        TxtUser.Focus();
                     }
                 }
                 else                                                        //Si el Txt de usuario esta lleno y
