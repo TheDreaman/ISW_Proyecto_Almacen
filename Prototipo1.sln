@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{F34012DA-48E6-4B11-AF93-220CD8049F8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{23B329D4-46F9-4AA1-B03B-A3D1914E0648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{B2E1A17C-5C1B-4DF1-8C86-AF364FDF5B7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F34012DA-48E6-4B11-AF93-220CD8049F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34012DA-48E6-4B11-AF93-220CD8049F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34012DA-48E6-4B11-AF93-220CD8049F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34012DA-48E6-4B11-AF93-220CD8049F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B329D4-46F9-4AA1-B03B-A3D1914E0648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B329D4-46F9-4AA1-B03B-A3D1914E0648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B329D4-46F9-4AA1-B03B-A3D1914E0648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B329D4-46F9-4AA1-B03B-A3D1914E0648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E1A17C-5C1B-4DF1-8C86-AF364FDF5B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E1A17C-5C1B-4DF1-8C86-AF364FDF5B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E1A17C-5C1B-4DF1-8C86-AF364FDF5B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E1A17C-5C1B-4DF1-8C86-AF364FDF5B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {961CD1CD-0108-409C-8121-06F052C35712}
+	EndGlobalSection
+EndGlobal
