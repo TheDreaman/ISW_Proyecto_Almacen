@@ -45,8 +45,7 @@
             this.BtProductos = new System.Windows.Forms.Button();
             this.ImgUser = new System.Windows.Forms.PictureBox();
             this.Contenido = new System.Windows.Forms.Panel();
-            this.LblBienvenido = new System.Windows.Forms.Label();
-            this.ImgLogo = new System.Windows.Forms.PictureBox();
+            this.BtLogout = new System.Windows.Forms.Button();
             this.TopBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMin)).BeginInit();
@@ -56,8 +55,6 @@
             this.PSubreportes.SuspendLayout();
             this.PSubProductos1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
-            this.Contenido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBarra
@@ -130,6 +127,7 @@
             // LeftMenu
             // 
             this.LeftMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.LeftMenu.Controls.Add(this.BtLogout);
             this.LeftMenu.Controls.Add(this.button3);
             this.LeftMenu.Controls.Add(this.PSubreportes);
             this.LeftMenu.Controls.Add(this.PSubProductos1);
@@ -163,7 +161,7 @@
             this.PSubreportes.Controls.Add(this.BtRepoInv);
             this.PSubreportes.Location = new System.Drawing.Point(0, 315);
             this.PSubreportes.Name = "PSubreportes";
-            this.PSubreportes.Size = new System.Drawing.Size(220, 195);
+            this.PSubreportes.Size = new System.Drawing.Size(220, 166);
             this.PSubreportes.TabIndex = 2;
             this.PSubreportes.Visible = false;
             // 
@@ -265,36 +263,31 @@
             this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgUser.TabIndex = 0;
             this.ImgUser.TabStop = false;
+            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click);
             // 
             // Contenido
             // 
-            this.Contenido.Controls.Add(this.LblBienvenido);
-            this.Contenido.Controls.Add(this.ImgLogo);
             this.Contenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenido.Location = new System.Drawing.Point(220, 24);
             this.Contenido.Name = "Contenido";
             this.Contenido.Size = new System.Drawing.Size(1080, 626);
             this.Contenido.TabIndex = 2;
             // 
-            // LblBienvenido
+            // BtLogout
             // 
-            this.LblBienvenido.AutoSize = true;
-            this.LblBienvenido.Font = new System.Drawing.Font("DIN", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBienvenido.Location = new System.Drawing.Point(134, 89);
-            this.LblBienvenido.Name = "LblBienvenido";
-            this.LblBienvenido.Size = new System.Drawing.Size(321, 34);
-            this.LblBienvenido.TabIndex = 5;
-            this.LblBienvenido.Text = "Bienvenido: PEPO MIRA";
-            // 
-            // ImgLogo
-            // 
-            this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
-            this.ImgLogo.Location = new System.Drawing.Point(449, 165);
-            this.ImgLogo.Name = "ImgLogo";
-            this.ImgLogo.Size = new System.Drawing.Size(300, 300);
-            this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgLogo.TabIndex = 4;
-            this.ImgLogo.TabStop = false;
+            this.BtLogout.BackColor = System.Drawing.SystemColors.MenuText;
+            this.BtLogout.FlatAppearance.BorderSize = 0;
+            this.BtLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtLogout.Font = new System.Drawing.Font("DIN", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtLogout.Location = new System.Drawing.Point(0, 537);
+            this.BtLogout.Name = "BtLogout";
+            this.BtLogout.Size = new System.Drawing.Size(220, 25);
+            this.BtLogout.TabIndex = 4;
+            this.BtLogout.Text = "Cerrar sesión";
+            this.BtLogout.UseVisualStyleBackColor = false;
+            this.BtLogout.Click += new System.EventHandler(this.BtLogout_Click);
             // 
             // FInicio
             // 
@@ -316,9 +309,6 @@
             this.PSubreportes.ResumeLayout(false);
             this.PSubProductos1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
-            this.Contenido.ResumeLayout(false);
-            this.Contenido.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,8 +331,7 @@
         private System.Windows.Forms.Panel PSubreportes;
         private System.Windows.Forms.Button BtReporteMov;
         private System.Windows.Forms.Button BtRepoInv;
-        private System.Windows.Forms.Label LblBienvenido;
-        private System.Windows.Forms.PictureBox ImgLogo;
+        private System.Windows.Forms.Button BtLogout;
     }
 }
 

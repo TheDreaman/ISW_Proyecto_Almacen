@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using Auxiliar.Cache;
 
 namespace AccesoDatos
 {
@@ -25,6 +26,14 @@ namespace AccesoDatos
                     SqlDataReader Reader = Comando.ExecuteReader();
                     if(Reader.HasRows)
                     {
+                        while(Reader.Read())
+                        {
+                            LoginCache.ID = Reader.GetInt32(0);
+                            LoginCache.Matricula = Reader.GetInt32(1);
+                            LoginCache.Name1 = Reader.GetString(4);
+                            LoginCache.Apellido = Reader.GetString(5);
+                            LoginCache.Email = Reader.GetString(6);
+                        }
                         return true;                //La consulta existe
                     }
                     else

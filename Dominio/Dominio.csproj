@@ -49,6 +49,10 @@
       <Project>{23b329d4-46f9-4aa1-b03b-a3d1914e0648}</Project>
       <Name>AccesoDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Auxiliar\Auxiliar.csproj">
+      <Project>{e499d9cf-8bcd-46bd-88bd-6acdff5b911f}</Project>
+      <Name>Auxiliar</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -92,6 +92,7 @@ namespace Presentacion
                     {
                         FInicio Inicio = new FInicio();
                         Inicio.Show();
+                        Inicio.FormClosed += Logout;
                         this.Hide();
                     }
                     else
@@ -123,6 +124,16 @@ namespace Presentacion
         {                                                       //de error
             LblError.Text = "" + msg;
             LblError.Visible = true;
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            TxtPass.Text = "Contraseña";
+            TxtPass.UseSystemPasswordChar = false;
+            TxtUser.Text = "Usuario";
+            LblError.Visible = false;
+            this.Show();
+            BtLogin.Focus();
         }
 
     }

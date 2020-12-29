@@ -45,5 +45,11 @@
     <Compile Include="DataUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Auxiliar\Auxiliar.csproj">
+      <Project>{e499d9cf-8bcd-46bd-88bd-6acdff5b911f}</Project>
+      <Name>Auxiliar</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

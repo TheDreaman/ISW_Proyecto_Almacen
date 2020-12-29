@@ -16,6 +16,7 @@ namespace Presentacion                                             //agregados d
         public FInicio()
         {
             InitializeComponent();
+            AbrirPestana(new Bienvenida());
         }
 
         private void BtCerrar_Click(object sender, EventArgs e)     //Evento Click en el PictureBox Cerrar
@@ -68,9 +69,7 @@ namespace Presentacion                                             //agregados d
 
         private void BtAdministrarPro_Click(object sender, EventArgs e)     //Evento Click en el boton Administrar Productos
         {
-            PSubProductos1.Visible = false;                                 //Oculta el panel del submenu de Productos
-            LblBienvenido.Visible = false;                                  //Oculta la pantalla de inicio (Imegen y texto)
-            ImgLogo.Visible = false;                                            
+            AbrirPestana(new ProdAdministrar());
         }
 
         private void BtReportes_Click(object sender, EventArgs e)           //Evento Click en el boton Reportes
@@ -88,16 +87,38 @@ namespace Presentacion                                             //agregados d
         private void BtRepoInv_Click(object sender, EventArgs e)
         {
             PSubreportes.Visible = false;
-            LblBienvenido.Visible = false;
-            ImgLogo.Visible = false;
         }
 
         private void BtReporteMov_Click(object sender, EventArgs e)
         {
             PSubreportes.Visible = false;
-            LblBienvenido.Visible = false;
-            ImgLogo.Visible = false;
         }
-                                                                                
+
+        private void AbrirPestana(object WinForm)
+        {
+            if(this.Contenido.Controls.Count>0)
+            {
+                this.Contenido.Controls.RemoveAt(0);
+            }
+            Form Newform = WinForm as Form;
+            Newform.TopLevel = false;
+            Newform.Dock = DockStyle.Fill;
+            this.Contenido.Controls.Add(Newform);
+            this.Contenido.Tag = Newform;
+            Newform.Show();
+        }
+
+        private void ImgUser_Click(object sender, EventArgs e)
+        {
+            AbrirPestana(new Bienvenida());
+        }
+
+        private void BtLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
+
+    
 }
