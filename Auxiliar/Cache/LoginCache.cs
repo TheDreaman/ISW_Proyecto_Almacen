@@ -14,6 +14,6 @@ namespace Auxiliar.Cache
         public static string Apellido { get; set; }
         public static string Rol { get; set; }
         public static string Email { get; set; }
-
+        public static byte[] Picture { get; set; }
     }
 }

@@ -63,9 +63,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(94, 44);
+            this.pictureBox3.Location = new System.Drawing.Point(118, 55);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox3.Size = new System.Drawing.Size(108, 146);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -136,6 +136,7 @@
             this.TxtPass.Text = "Contraseña";
             this.TxtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPass.Enter += new System.EventHandler(this.TxtPass_Enter);
+            this.TxtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPass_KeyPress);
             this.TxtPass.Leave += new System.EventHandler(this.TxtPass_Leave);
             // 
             // label1

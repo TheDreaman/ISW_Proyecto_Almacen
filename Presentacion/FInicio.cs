@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Dominio;
+using Auxiliar.Cache;
                                                                    //*Los efectos de colores y transparencias fueron 
 namespace Presentacion                                             //agregados desde la ventana de propiedades del Form*
 {
@@ -17,6 +19,8 @@ namespace Presentacion                                             //agregados d
         {
             InitializeComponent();
             AbrirPestana(new Bienvenida());
+            VerIMGPerfil(ImgUser);
+            //ImgUser.Load();
         }
 
         private void BtCerrar_Click(object sender, EventArgs e)     //Evento Click en el PictureBox Cerrar
@@ -116,6 +120,14 @@ namespace Presentacion                                             //agregados d
         private void BtLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void VerIMGPerfil(PictureBox Pic)
+        {
+            ModeloUsuario user = new ModeloUsuario();
+            user.ConsultaIMG(LoginCache.ID);
+            System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Picture);
+            Pic.Image = System.Drawing.Bitmap.FromStream(MStream);
         }
 
     }

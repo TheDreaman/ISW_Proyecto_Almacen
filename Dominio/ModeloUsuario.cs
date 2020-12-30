@@ -14,5 +14,9 @@ namespace Dominio
         {
             return DataUser.Login(user, pass);
         }
+        public byte[] ConsultaIMG(int ID)
+        {
+            return DataUser.ConsultaIMG(ID);
+        }
     }
 }

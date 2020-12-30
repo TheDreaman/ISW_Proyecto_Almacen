@@ -24,7 +24,7 @@ namespace AccesoDatos
                     Comando.Parameters.AddWithValue("@pass", pass);
                     Comando.CommandType = CommandType.Text;
                     SqlDataReader Reader = Comando.ExecuteReader();
-                    if(Reader.HasRows)
+                    if(Reader.HasRows) 
                     {
                         while(Reader.Read())
                         {
@@ -41,6 +41,24 @@ namespace AccesoDatos
                         return false;               //La consulta no existe
                     }
                 }
+            }
+        }
+
+        public byte[] ConsultaIMG(int ID)
+        {
+            using (var Conect = GetConnection())
+            {
+                Conect.Open();
+                SqlDataAdapter DA = new SqlDataAdapter();
+                DA = new SqlDataAdapter("select Picture from Users where ID = '" + ID + "'",Conect);
+                DataSet DS = new DataSet();
+                DA.Fill(DS, "Users");
+                byte[] Data = new byte[0];
+                DataRow DR;
+                DR = DS.Tables["Users"].Rows[0];
+                Data = (byte[])DR["Picture"];
+                LoginCache.Picture = Data;
+                return Data;
             }
         }
     }

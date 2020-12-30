@@ -63,6 +63,14 @@ namespace Presentacion
             this.WindowState = FormWindowState.Minimized;                   //Minimiza la ventana
         }
 
+        private void TxtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                Login();
+            }
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]            //<----De aqui
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -82,13 +90,34 @@ namespace Presentacion
 
         private void BtLogin_Click(object sender, EventArgs e)              //Evento Click en el boton Login
         {
+            Login();
+        }
+
+        private void msgError(string msg)                       //Metodo vacio que sirve para mostrar los mensajes
+        {                                                       //de error
+            LblError.Text = "" + msg;
+            LblError.Visible = true;
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            TxtPass.Text = "Contraseña";
+            TxtPass.UseSystemPasswordChar = false;
+            TxtUser.Text = "Usuario";
+            LblError.Visible = false;
+            this.Show();
+            BtLogin.Focus();
+        }
+
+        private void Login()
+        {
             if (TxtUser.Text != "Usuario")                                  //Si el Txt de usuario esta lleno
             {
-                if(TxtPass.Text != "Contraseña")                            //Si el Txt de usuario y password esta lleno
+                if (TxtPass.Text != "Contraseña")                            //Si el Txt de usuario y password esta lleno
                 {
                     ModeloUsuario user = new ModeloUsuario();
                     var LoginValido = user.LoginUser(TxtUser.Text, TxtPass.Text);
-                    if (LoginValido==true)
+                    if (LoginValido == true)
                     {
                         FInicio Inicio = new FInicio();
                         Inicio.Show();
@@ -119,22 +148,5 @@ namespace Presentacion
                 }
             }
         }
-
-        private void msgError(string msg)                       //Metodo vacio que sirve para mostrar los mensajes
-        {                                                       //de error
-            LblError.Text = "" + msg;
-            LblError.Visible = true;
-        }
-
-        private void Logout(object sender, FormClosedEventArgs e)
-        {
-            TxtPass.Text = "Contraseña";
-            TxtPass.UseSystemPasswordChar = false;
-            TxtUser.Text = "Usuario";
-            LblError.Visible = false;
-            this.Show();
-            BtLogin.Focus();
-        }
-
     }
 }
