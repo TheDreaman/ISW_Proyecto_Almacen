@@ -91,10 +91,12 @@ namespace Presentacion                                             //agregados d
         private void BtRepoInv_Click(object sender, EventArgs e)
         {
             PSubreportes.Visible = false;
+            AbrirPestana(new ReporteInventario());
         }
 
         private void BtReporteMov_Click(object sender, EventArgs e)
         {
+            AbrirPestana(new ReporteMovimientos());
             PSubreportes.Visible = false;
         }
 
@@ -130,6 +132,10 @@ namespace Presentacion                                             //agregados d
             Pic.Image = System.Drawing.Bitmap.FromStream(MStream);
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirPestana(new AdministrarUsuarios());
+        }
     }
 
     
