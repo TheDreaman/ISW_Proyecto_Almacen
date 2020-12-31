@@ -14,9 +14,12 @@ namespace Presentacion
 {
     public partial class FLogin : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
         public FLogin()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
         private void TxtUser_Enter(object sender, EventArgs e)              //Evento Enter en el TextBox de Usuario
@@ -95,7 +98,7 @@ namespace Presentacion
 
         private void msgError(string msg)                       //Metodo vacio que sirve para mostrar los mensajes
         {                                                       //de error
-            LblError.Text = "" + msg;
+            LblError.Text = "       " + msg;
             LblError.Visible = true;
         }
 
@@ -147,6 +150,11 @@ namespace Presentacion
                     msgError("Ingrese Usurio y Contraseña");
                 }
             }
+        }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+            //PBG1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
     }
 }

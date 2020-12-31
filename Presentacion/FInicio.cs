@@ -20,7 +20,7 @@ namespace Presentacion                                             //agregados d
             InitializeComponent();
             AbrirPestana(new Bienvenida());
             VerIMGPerfil(ImgUser);
-            //ImgUser.Load();
+            MsgRol();
         }
 
         private void BtCerrar_Click(object sender, EventArgs e)     //Evento Click en el PictureBox Cerrar
@@ -73,6 +73,13 @@ namespace Presentacion                                             //agregados d
 
         private void BtAdministrarPro_Click(object sender, EventArgs e)     //Evento Click en el boton Administrar Productos
         {
+            if (ArrowProd.Visible == false)                              //Mismo codigo que el panel de productos
+            {
+                ArrowProd.Visible = true;
+                ArrowAdminUser.Visible = false;
+                ArrowRepomov.Visible = false;
+                ArrowRepo.Visible = false;
+            }
             AbrirPestana(new ProdAdministrar());
         }
 
@@ -90,14 +97,27 @@ namespace Presentacion                                             //agregados d
 
         private void BtRepoInv_Click(object sender, EventArgs e)
         {
-            PSubreportes.Visible = false;
+            if (ArrowRepo.Visible == false)                              //Mismo codigo que el panel de productos
+            {
+                ArrowRepo.Visible = true;
+                ArrowAdminUser.Visible = false;
+                ArrowProd.Visible = false;
+                ArrowRepomov.Visible = false;
+            }
             AbrirPestana(new ReporteInventario());
         }
 
         private void BtReporteMov_Click(object sender, EventArgs e)
         {
             AbrirPestana(new ReporteMovimientos());
-            PSubreportes.Visible = false;
+            if (ArrowRepomov.Visible == false)                              //Mismo codigo que el panel de productos
+            {
+                ArrowRepomov.Visible = true;
+                ArrowAdminUser.Visible = false;
+                ArrowRepo.Visible = false;
+                ArrowProd.Visible = false;
+                
+            }
         }
 
         private void AbrirPestana(object WinForm)
@@ -117,6 +137,10 @@ namespace Presentacion                                             //agregados d
         private void ImgUser_Click(object sender, EventArgs e)
         {
             AbrirPestana(new Bienvenida());
+            ArrowAdminUser.Visible = false;
+            ArrowRepomov.Visible = false;
+            ArrowRepo.Visible = false;
+            ArrowProd.Visible = false;
         }
 
         private void BtLogout_Click(object sender, EventArgs e)
@@ -135,6 +159,18 @@ namespace Presentacion                                             //agregados d
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirPestana(new AdministrarUsuarios());
+            if (ArrowAdminUser.Visible == false)                            //Oculta o muestra el panel del submenu 
+            {                                                               //de Productos dependiendo su visibilidad 
+                ArrowAdminUser.Visible = true;
+                ArrowRepomov.Visible = false;
+                ArrowRepo.Visible = false;
+                ArrowProd.Visible = false;
+            }
+        }
+
+        private void MsgRol()
+        {
+            TxtRol.Text = LoginCache.Rol;
         }
     }
 

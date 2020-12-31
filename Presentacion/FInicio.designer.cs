@@ -46,6 +46,14 @@
             this.BtProductos = new System.Windows.Forms.Button();
             this.ImgUser = new System.Windows.Forms.PictureBox();
             this.Contenido = new System.Windows.Forms.Panel();
+            this.TxtRol = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ArrowProd = new System.Windows.Forms.PictureBox();
+            this.ArrowRepo = new System.Windows.Forms.PictureBox();
+            this.ArrowAdminUser = new System.Windows.Forms.PictureBox();
+            this.ArrowRepomov = new System.Windows.Forms.PictureBox();
             this.TopBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMin)).BeginInit();
@@ -55,6 +63,10 @@
             this.PSubreportes.SuspendLayout();
             this.PSubProductos1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowProd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowAdminUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepomov)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBarra
@@ -126,7 +138,9 @@
             // 
             // LeftMenu
             // 
-            this.LeftMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.LeftMenu.Controls.Add(this.ArrowAdminUser);
+            this.LeftMenu.Controls.Add(this.TxtRol);
             this.LeftMenu.Controls.Add(this.BtLogout);
             this.LeftMenu.Controls.Add(this.button3);
             this.LeftMenu.Controls.Add(this.PSubreportes);
@@ -142,15 +156,17 @@
             // 
             // BtLogout
             // 
-            this.BtLogout.BackColor = System.Drawing.SystemColors.MenuText;
+            this.BtLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtLogout.BackColor = System.Drawing.Color.Black;
             this.BtLogout.FlatAppearance.BorderSize = 0;
-            this.BtLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtLogout.Font = new System.Drawing.Font("DIN", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtLogout.Location = new System.Drawing.Point(0, 537);
+            this.BtLogout.Location = new System.Drawing.Point(0, 560);
             this.BtLogout.Name = "BtLogout";
-            this.BtLogout.Size = new System.Drawing.Size(220, 25);
+            this.BtLogout.Size = new System.Drawing.Size(220, 30);
             this.BtLogout.TabIndex = 4;
             this.BtLogout.Text = "Cerrar sesión";
             this.BtLogout.UseVisualStyleBackColor = false;
@@ -158,9 +174,11 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuText;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -174,9 +192,13 @@
             // 
             // PSubreportes
             // 
+            this.PSubreportes.Controls.Add(this.ArrowRepomov);
+            this.PSubreportes.Controls.Add(this.panel3);
+            this.PSubreportes.Controls.Add(this.ArrowRepo);
+            this.PSubreportes.Controls.Add(this.panel2);
             this.PSubreportes.Controls.Add(this.BtReporteMov);
             this.PSubreportes.Controls.Add(this.BtRepoInv);
-            this.PSubreportes.Location = new System.Drawing.Point(0, 315);
+            this.PSubreportes.Location = new System.Drawing.Point(0, 374);
             this.PSubreportes.Name = "PSubreportes";
             this.PSubreportes.Size = new System.Drawing.Size(220, 166);
             this.PSubreportes.TabIndex = 2;
@@ -184,70 +206,79 @@
             // 
             // BtReporteMov
             // 
-            this.BtReporteMov.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BtReporteMov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.BtReporteMov.FlatAppearance.BorderSize = 0;
-            this.BtReporteMov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtReporteMov.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtReporteMov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtReporteMov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtReporteMov.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtReporteMov.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtReporteMov.Location = new System.Drawing.Point(0, 36);
+            this.BtReporteMov.Location = new System.Drawing.Point(12, 39);
             this.BtReporteMov.Name = "BtReporteMov";
-            this.BtReporteMov.Size = new System.Drawing.Size(220, 30);
+            this.BtReporteMov.Size = new System.Drawing.Size(208, 30);
             this.BtReporteMov.TabIndex = 4;
             this.BtReporteMov.Text = "Reporte de movimientos";
+            this.BtReporteMov.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtReporteMov.UseVisualStyleBackColor = false;
             this.BtReporteMov.Click += new System.EventHandler(this.BtReporteMov_Click);
             // 
             // BtRepoInv
             // 
-            this.BtRepoInv.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BtRepoInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.BtRepoInv.FlatAppearance.BorderSize = 0;
-            this.BtRepoInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtRepoInv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtRepoInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtRepoInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtRepoInv.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtRepoInv.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtRepoInv.Location = new System.Drawing.Point(0, 0);
+            this.BtRepoInv.Location = new System.Drawing.Point(12, 3);
             this.BtRepoInv.Name = "BtRepoInv";
-            this.BtRepoInv.Size = new System.Drawing.Size(220, 30);
+            this.BtRepoInv.Size = new System.Drawing.Size(208, 30);
             this.BtRepoInv.TabIndex = 3;
             this.BtRepoInv.Text = "Reporte de inventario";
+            this.BtRepoInv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtRepoInv.UseVisualStyleBackColor = false;
             this.BtRepoInv.Click += new System.EventHandler(this.BtRepoInv_Click);
             // 
             // PSubProductos1
             // 
+            this.PSubProductos1.Controls.Add(this.ArrowProd);
+            this.PSubProductos1.Controls.Add(this.panel1);
             this.PSubProductos1.Controls.Add(this.BtAdministrarPro);
-            this.PSubProductos1.Location = new System.Drawing.Point(0, 165);
+            this.PSubProductos1.Location = new System.Drawing.Point(0, 257);
             this.PSubProductos1.Name = "PSubProductos1";
-            this.PSubProductos1.Size = new System.Drawing.Size(220, 98);
+            this.PSubProductos1.Size = new System.Drawing.Size(220, 75);
             this.PSubProductos1.TabIndex = 0;
             this.PSubProductos1.Visible = false;
             // 
             // BtAdministrarPro
             // 
-            this.BtAdministrarPro.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BtAdministrarPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.BtAdministrarPro.FlatAppearance.BorderSize = 0;
-            this.BtAdministrarPro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtAdministrarPro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtAdministrarPro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtAdministrarPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtAdministrarPro.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtAdministrarPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtAdministrarPro.Location = new System.Drawing.Point(0, 2);
+            this.BtAdministrarPro.Location = new System.Drawing.Point(12, 3);
             this.BtAdministrarPro.Name = "BtAdministrarPro";
-            this.BtAdministrarPro.Size = new System.Drawing.Size(220, 30);
+            this.BtAdministrarPro.Size = new System.Drawing.Size(208, 30);
             this.BtAdministrarPro.TabIndex = 2;
             this.BtAdministrarPro.Text = "Administrar";
+            this.BtAdministrarPro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtAdministrarPro.UseVisualStyleBackColor = false;
             this.BtAdministrarPro.Click += new System.EventHandler(this.BtAdministrarPro_Click);
             // 
             // BtReportes
             // 
-            this.BtReportes.BackColor = System.Drawing.SystemColors.MenuText;
+            this.BtReportes.BackColor = System.Drawing.Color.Black;
             this.BtReportes.FlatAppearance.BorderSize = 0;
-            this.BtReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtReportes.Font = new System.Drawing.Font("DIN", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtReportes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtReportes.Location = new System.Drawing.Point(0, 279);
+            this.BtReportes.Location = new System.Drawing.Point(0, 338);
             this.BtReportes.Name = "BtReportes";
             this.BtReportes.Size = new System.Drawing.Size(220, 30);
             this.BtReportes.TabIndex = 1;
@@ -257,13 +288,14 @@
             // 
             // BtProductos
             // 
-            this.BtProductos.BackColor = System.Drawing.SystemColors.MenuText;
+            this.BtProductos.BackColor = System.Drawing.Color.Black;
             this.BtProductos.FlatAppearance.BorderSize = 0;
-            this.BtProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtProductos.Font = new System.Drawing.Font("DIN", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtProductos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtProductos.Location = new System.Drawing.Point(0, 129);
+            this.BtProductos.Location = new System.Drawing.Point(0, 221);
             this.BtProductos.Name = "BtProductos";
             this.BtProductos.Size = new System.Drawing.Size(220, 30);
             this.BtProductos.TabIndex = 0;
@@ -274,9 +306,9 @@
             // ImgUser
             // 
             this.ImgUser.Image = ((System.Drawing.Image)(resources.GetObject("ImgUser.Image")));
-            this.ImgUser.Location = new System.Drawing.Point(0, 6);
+            this.ImgUser.Location = new System.Drawing.Point(0, 9);
             this.ImgUser.Name = "ImgUser";
-            this.ImgUser.Size = new System.Drawing.Size(220, 117);
+            this.ImgUser.Size = new System.Drawing.Size(220, 180);
             this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgUser.TabIndex = 0;
             this.ImgUser.TabStop = false;
@@ -290,6 +322,90 @@
             this.Contenido.Size = new System.Drawing.Size(1080, 626);
             this.Contenido.TabIndex = 2;
             // 
+            // TxtRol
+            // 
+            this.TxtRol.AutoSize = true;
+            this.TxtRol.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRol.ForeColor = System.Drawing.Color.White;
+            this.TxtRol.Location = new System.Drawing.Point(76, 192);
+            this.TxtRol.Name = "TxtRol";
+            this.TxtRol.Size = new System.Drawing.Size(25, 15);
+            this.TxtRol.TabIndex = 5;
+            this.TxtRol.Text = "Rol";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 30);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 30);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(0, 39);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 30);
+            this.panel3.TabIndex = 5;
+            // 
+            // ArrowProd
+            // 
+            this.ArrowProd.BackColor = System.Drawing.Color.Transparent;
+            this.ArrowProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ArrowProd.Image = ((System.Drawing.Image)(resources.GetObject("ArrowProd.Image")));
+            this.ArrowProd.Location = new System.Drawing.Point(190, 3);
+            this.ArrowProd.Name = "ArrowProd";
+            this.ArrowProd.Size = new System.Drawing.Size(30, 30);
+            this.ArrowProd.TabIndex = 0;
+            this.ArrowProd.TabStop = false;
+            this.ArrowProd.Visible = false;
+            // 
+            // ArrowRepo
+            // 
+            this.ArrowRepo.BackColor = System.Drawing.Color.Transparent;
+            this.ArrowRepo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ArrowRepo.Image = ((System.Drawing.Image)(resources.GetObject("ArrowRepo.Image")));
+            this.ArrowRepo.Location = new System.Drawing.Point(190, 3);
+            this.ArrowRepo.Name = "ArrowRepo";
+            this.ArrowRepo.Size = new System.Drawing.Size(30, 30);
+            this.ArrowRepo.TabIndex = 6;
+            this.ArrowRepo.TabStop = false;
+            this.ArrowRepo.Visible = false;
+            // 
+            // ArrowAdminUser
+            // 
+            this.ArrowAdminUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ArrowAdminUser.BackColor = System.Drawing.Color.Transparent;
+            this.ArrowAdminUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ArrowAdminUser.Image = ((System.Drawing.Image)(resources.GetObject("ArrowAdminUser.Image")));
+            this.ArrowAdminUser.Location = new System.Drawing.Point(190, 596);
+            this.ArrowAdminUser.Name = "ArrowAdminUser";
+            this.ArrowAdminUser.Size = new System.Drawing.Size(30, 30);
+            this.ArrowAdminUser.TabIndex = 8;
+            this.ArrowAdminUser.TabStop = false;
+            this.ArrowAdminUser.Visible = false;
+            // 
+            // ArrowRepomov
+            // 
+            this.ArrowRepomov.BackColor = System.Drawing.Color.Transparent;
+            this.ArrowRepomov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ArrowRepomov.Image = ((System.Drawing.Image)(resources.GetObject("ArrowRepomov.Image")));
+            this.ArrowRepomov.Location = new System.Drawing.Point(190, 39);
+            this.ArrowRepomov.Name = "ArrowRepomov";
+            this.ArrowRepomov.Size = new System.Drawing.Size(30, 30);
+            this.ArrowRepomov.TabIndex = 7;
+            this.ArrowRepomov.TabStop = false;
+            this.ArrowRepomov.Visible = false;
+            // 
             // FInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +416,7 @@
             this.Controls.Add(this.TopBarra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.TopBarra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).EndInit();
@@ -307,9 +424,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtCerrar)).EndInit();
             this.LeftMenu.ResumeLayout(false);
+            this.LeftMenu.PerformLayout();
             this.PSubreportes.ResumeLayout(false);
             this.PSubProductos1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowAdminUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepomov)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,6 +455,14 @@
         private System.Windows.Forms.Button BtReporteMov;
         private System.Windows.Forms.Button BtRepoInv;
         private System.Windows.Forms.Button BtLogout;
+        private System.Windows.Forms.Label TxtRol;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox ArrowProd;
+        private System.Windows.Forms.PictureBox ArrowAdminUser;
+        private System.Windows.Forms.PictureBox ArrowRepo;
+        private System.Windows.Forms.PictureBox ArrowRepomov;
     }
 }
 

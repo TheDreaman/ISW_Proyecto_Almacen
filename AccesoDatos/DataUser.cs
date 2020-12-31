@@ -32,7 +32,9 @@ namespace AccesoDatos
                             LoginCache.Matricula = Reader.GetInt32(1);
                             LoginCache.Name1 = Reader.GetString(4);
                             LoginCache.Apellido = Reader.GetString(5);
-                            LoginCache.Email = Reader.GetString(6);
+                            LoginCache.Rol = Reader.GetString(6);
+                            LoginCache.Email = Reader.GetString(7);
+                            LoginCache.Cargo = Reader.GetString(9);
                         }
                         return true;                //La consulta existe
                     }
