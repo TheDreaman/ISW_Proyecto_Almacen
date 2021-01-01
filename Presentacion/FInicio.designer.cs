@@ -35,25 +35,21 @@
             this.BtMax = new System.Windows.Forms.PictureBox();
             this.BtCerrar = new System.Windows.Forms.PictureBox();
             this.LeftMenu = new System.Windows.Forms.Panel();
+            this.TxtRol = new System.Windows.Forms.Label();
             this.BtLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.PSubreportes = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.BtReporteMov = new System.Windows.Forms.Button();
             this.BtRepoInv = new System.Windows.Forms.Button();
             this.PSubProductos1 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.BtAdministrarPro = new System.Windows.Forms.Button();
             this.BtReportes = new System.Windows.Forms.Button();
             this.BtProductos = new System.Windows.Forms.Button();
-            this.ImgUser = new System.Windows.Forms.PictureBox();
             this.Contenido = new System.Windows.Forms.Panel();
-            this.TxtRol = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ArrowProd = new System.Windows.Forms.PictureBox();
-            this.ArrowRepo = new System.Windows.Forms.PictureBox();
-            this.ArrowAdminUser = new System.Windows.Forms.PictureBox();
-            this.ArrowRepomov = new System.Windows.Forms.PictureBox();
+            this.ImgUser = new Presentacion.PictureBoxRounded();
             this.TopBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMin)).BeginInit();
@@ -63,10 +59,6 @@
             this.PSubreportes.SuspendLayout();
             this.PSubProductos1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowAdminUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepomov)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBarra
@@ -139,7 +131,7 @@
             // LeftMenu
             // 
             this.LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.LeftMenu.Controls.Add(this.ArrowAdminUser);
+            this.LeftMenu.Controls.Add(this.ImgUser);
             this.LeftMenu.Controls.Add(this.TxtRol);
             this.LeftMenu.Controls.Add(this.BtLogout);
             this.LeftMenu.Controls.Add(this.button3);
@@ -147,12 +139,22 @@
             this.LeftMenu.Controls.Add(this.PSubProductos1);
             this.LeftMenu.Controls.Add(this.BtReportes);
             this.LeftMenu.Controls.Add(this.BtProductos);
-            this.LeftMenu.Controls.Add(this.ImgUser);
             this.LeftMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftMenu.Location = new System.Drawing.Point(0, 24);
             this.LeftMenu.Name = "LeftMenu";
             this.LeftMenu.Size = new System.Drawing.Size(220, 626);
             this.LeftMenu.TabIndex = 1;
+            // 
+            // TxtRol
+            // 
+            this.TxtRol.AutoSize = true;
+            this.TxtRol.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRol.ForeColor = System.Drawing.Color.White;
+            this.TxtRol.Location = new System.Drawing.Point(76, 192);
+            this.TxtRol.Name = "TxtRol";
+            this.TxtRol.Size = new System.Drawing.Size(25, 15);
+            this.TxtRol.TabIndex = 5;
+            this.TxtRol.Text = "Rol";
             // 
             // BtLogout
             // 
@@ -182,19 +184,20 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.Location = new System.Drawing.Point(0, 596);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(220, 30);
+            this.button3.Size = new System.Drawing.Size(255, 30);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Administrar Usuarios";
+            this.button3.Text = "          Administrar Usuarios";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // PSubreportes
             // 
-            this.PSubreportes.Controls.Add(this.ArrowRepomov);
             this.PSubreportes.Controls.Add(this.panel3);
-            this.PSubreportes.Controls.Add(this.ArrowRepo);
             this.PSubreportes.Controls.Add(this.panel2);
             this.PSubreportes.Controls.Add(this.BtReporteMov);
             this.PSubreportes.Controls.Add(this.BtRepoInv);
@@ -203,6 +206,22 @@
             this.PSubreportes.Size = new System.Drawing.Size(220, 166);
             this.PSubreportes.TabIndex = 2;
             this.PSubreportes.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(0, 39);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 30);
+            this.panel3.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 30);
+            this.panel2.TabIndex = 1;
             // 
             // BtReporteMov
             // 
@@ -213,9 +232,11 @@
             this.BtReporteMov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtReporteMov.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtReporteMov.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtReporteMov.Image = ((System.Drawing.Image)(resources.GetObject("BtReporteMov.Image")));
+            this.BtReporteMov.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtReporteMov.Location = new System.Drawing.Point(12, 39);
             this.BtReporteMov.Name = "BtReporteMov";
-            this.BtReporteMov.Size = new System.Drawing.Size(208, 30);
+            this.BtReporteMov.Size = new System.Drawing.Size(250, 30);
             this.BtReporteMov.TabIndex = 4;
             this.BtReporteMov.Text = "Reporte de movimientos";
             this.BtReporteMov.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,9 +252,11 @@
             this.BtRepoInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtRepoInv.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtRepoInv.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtRepoInv.Image = ((System.Drawing.Image)(resources.GetObject("BtRepoInv.Image")));
+            this.BtRepoInv.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtRepoInv.Location = new System.Drawing.Point(12, 3);
             this.BtRepoInv.Name = "BtRepoInv";
-            this.BtRepoInv.Size = new System.Drawing.Size(208, 30);
+            this.BtRepoInv.Size = new System.Drawing.Size(250, 30);
             this.BtRepoInv.TabIndex = 3;
             this.BtRepoInv.Text = "Reporte de inventario";
             this.BtRepoInv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,7 +265,6 @@
             // 
             // PSubProductos1
             // 
-            this.PSubProductos1.Controls.Add(this.ArrowProd);
             this.PSubProductos1.Controls.Add(this.panel1);
             this.PSubProductos1.Controls.Add(this.BtAdministrarPro);
             this.PSubProductos1.Location = new System.Drawing.Point(0, 257);
@@ -250,6 +272,14 @@
             this.PSubProductos1.Size = new System.Drawing.Size(220, 75);
             this.PSubProductos1.TabIndex = 0;
             this.PSubProductos1.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 30);
+            this.panel1.TabIndex = 0;
             // 
             // BtAdministrarPro
             // 
@@ -260,9 +290,11 @@
             this.BtAdministrarPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtAdministrarPro.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtAdministrarPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtAdministrarPro.Image = ((System.Drawing.Image)(resources.GetObject("BtAdministrarPro.Image")));
+            this.BtAdministrarPro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtAdministrarPro.Location = new System.Drawing.Point(12, 3);
             this.BtAdministrarPro.Name = "BtAdministrarPro";
-            this.BtAdministrarPro.Size = new System.Drawing.Size(208, 30);
+            this.BtAdministrarPro.Size = new System.Drawing.Size(250, 30);
             this.BtAdministrarPro.TabIndex = 2;
             this.BtAdministrarPro.Text = "Administrar";
             this.BtAdministrarPro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,17 +335,6 @@
             this.BtProductos.UseVisualStyleBackColor = false;
             this.BtProductos.Click += new System.EventHandler(this.BtProductos_Click);
             // 
-            // ImgUser
-            // 
-            this.ImgUser.Image = ((System.Drawing.Image)(resources.GetObject("ImgUser.Image")));
-            this.ImgUser.Location = new System.Drawing.Point(0, 9);
-            this.ImgUser.Name = "ImgUser";
-            this.ImgUser.Size = new System.Drawing.Size(220, 180);
-            this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgUser.TabIndex = 0;
-            this.ImgUser.TabStop = false;
-            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click);
-            // 
             // Contenido
             // 
             this.Contenido.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -322,89 +343,16 @@
             this.Contenido.Size = new System.Drawing.Size(1080, 626);
             this.Contenido.TabIndex = 2;
             // 
-            // TxtRol
+            // ImgUser
             // 
-            this.TxtRol.AutoSize = true;
-            this.TxtRol.Font = new System.Drawing.Font("DIN", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRol.ForeColor = System.Drawing.Color.White;
-            this.TxtRol.Location = new System.Drawing.Point(76, 192);
-            this.TxtRol.Name = "TxtRol";
-            this.TxtRol.Size = new System.Drawing.Size(25, 15);
-            this.TxtRol.TabIndex = 5;
-            this.TxtRol.Text = "Rol";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 30);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(0, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 30);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(0, 39);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 30);
-            this.panel3.TabIndex = 5;
-            // 
-            // ArrowProd
-            // 
-            this.ArrowProd.BackColor = System.Drawing.Color.Transparent;
-            this.ArrowProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ArrowProd.Image = ((System.Drawing.Image)(resources.GetObject("ArrowProd.Image")));
-            this.ArrowProd.Location = new System.Drawing.Point(190, 3);
-            this.ArrowProd.Name = "ArrowProd";
-            this.ArrowProd.Size = new System.Drawing.Size(30, 30);
-            this.ArrowProd.TabIndex = 0;
-            this.ArrowProd.TabStop = false;
-            this.ArrowProd.Visible = false;
-            // 
-            // ArrowRepo
-            // 
-            this.ArrowRepo.BackColor = System.Drawing.Color.Transparent;
-            this.ArrowRepo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ArrowRepo.Image = ((System.Drawing.Image)(resources.GetObject("ArrowRepo.Image")));
-            this.ArrowRepo.Location = new System.Drawing.Point(190, 3);
-            this.ArrowRepo.Name = "ArrowRepo";
-            this.ArrowRepo.Size = new System.Drawing.Size(30, 30);
-            this.ArrowRepo.TabIndex = 6;
-            this.ArrowRepo.TabStop = false;
-            this.ArrowRepo.Visible = false;
-            // 
-            // ArrowAdminUser
-            // 
-            this.ArrowAdminUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ArrowAdminUser.BackColor = System.Drawing.Color.Transparent;
-            this.ArrowAdminUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ArrowAdminUser.Image = ((System.Drawing.Image)(resources.GetObject("ArrowAdminUser.Image")));
-            this.ArrowAdminUser.Location = new System.Drawing.Point(190, 596);
-            this.ArrowAdminUser.Name = "ArrowAdminUser";
-            this.ArrowAdminUser.Size = new System.Drawing.Size(30, 30);
-            this.ArrowAdminUser.TabIndex = 8;
-            this.ArrowAdminUser.TabStop = false;
-            this.ArrowAdminUser.Visible = false;
-            // 
-            // ArrowRepomov
-            // 
-            this.ArrowRepomov.BackColor = System.Drawing.Color.Transparent;
-            this.ArrowRepomov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ArrowRepomov.Image = ((System.Drawing.Image)(resources.GetObject("ArrowRepomov.Image")));
-            this.ArrowRepomov.Location = new System.Drawing.Point(190, 39);
-            this.ArrowRepomov.Name = "ArrowRepomov";
-            this.ArrowRepomov.Size = new System.Drawing.Size(30, 30);
-            this.ArrowRepomov.TabIndex = 7;
-            this.ArrowRepomov.TabStop = false;
-            this.ArrowRepomov.Visible = false;
+            this.ImgUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImgUser.Location = new System.Drawing.Point(0, 9);
+            this.ImgUser.Name = "ImgUser";
+            this.ImgUser.Size = new System.Drawing.Size(220, 180);
+            this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgUser.TabIndex = 0;
+            this.ImgUser.TabStop = false;
+            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click_1);
             // 
             // FInicio
             // 
@@ -428,10 +376,6 @@
             this.PSubreportes.ResumeLayout(false);
             this.PSubProductos1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowAdminUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArrowRepomov)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,7 +390,6 @@
         private System.Windows.Forms.PictureBox BtMin;
         private System.Windows.Forms.PictureBox BtMax;
         private System.Windows.Forms.Button BtProductos;
-        private System.Windows.Forms.PictureBox ImgUser;
         private System.Windows.Forms.Button BtReportes;
         private System.Windows.Forms.Panel PSubProductos1;
         private System.Windows.Forms.Button BtAdministrarPro;
@@ -459,10 +402,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox ArrowProd;
-        private System.Windows.Forms.PictureBox ArrowAdminUser;
-        private System.Windows.Forms.PictureBox ArrowRepo;
-        private System.Windows.Forms.PictureBox ArrowRepomov;
+        private PictureBoxRounded ImgUser;
     }
 }
 

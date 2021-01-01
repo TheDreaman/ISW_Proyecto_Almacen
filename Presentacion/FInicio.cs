@@ -73,12 +73,12 @@ namespace Presentacion                                             //agregados d
 
         private void BtAdministrarPro_Click(object sender, EventArgs e)     //Evento Click en el boton Administrar Productos
         {
-            if (ArrowProd.Visible == false)                              //Mismo codigo que el panel de productos
+            if (BtAdministrarPro.Width == 250)                              //Mismo codigo que el panel de productos
             {
-                ArrowProd.Visible = true;
-                ArrowAdminUser.Visible = false;
-                ArrowRepomov.Visible = false;
-                ArrowRepo.Visible = false;
+                BtAdministrarPro.Width = 217; //on=217 off=250
+                BtRepoInv.Width = 250;
+                BtReporteMov.Width = 250;
+                button3.Width = 255; //on=230 off=255
             }
             AbrirPestana(new ProdAdministrar());
         }
@@ -97,12 +97,12 @@ namespace Presentacion                                             //agregados d
 
         private void BtRepoInv_Click(object sender, EventArgs e)
         {
-            if (ArrowRepo.Visible == false)                              //Mismo codigo que el panel de productos
+            if (BtRepoInv.Width == 250)                              //Mismo codigo que el panel de productos
             {
-                ArrowRepo.Visible = true;
-                ArrowAdminUser.Visible = false;
-                ArrowProd.Visible = false;
-                ArrowRepomov.Visible = false;
+                BtAdministrarPro.Width = 250; //on=217 off=250
+                BtRepoInv.Width = 217;
+                BtReporteMov.Width = 250;
+                button3.Width = 255; //on=230 off=255
             }
             AbrirPestana(new ReporteInventario());
         }
@@ -110,13 +110,12 @@ namespace Presentacion                                             //agregados d
         private void BtReporteMov_Click(object sender, EventArgs e)
         {
             AbrirPestana(new ReporteMovimientos());
-            if (ArrowRepomov.Visible == false)                              //Mismo codigo que el panel de productos
+            if (BtReporteMov.Width == 250)                              //Mismo codigo que el panel de productos
             {
-                ArrowRepomov.Visible = true;
-                ArrowAdminUser.Visible = false;
-                ArrowRepo.Visible = false;
-                ArrowProd.Visible = false;
-                
+                BtAdministrarPro.Width = 250; //on=217 off=250
+                BtRepoInv.Width = 250;
+                BtReporteMov.Width = 217;
+                button3.Width = 255; //on=230 off=255    
             }
         }
 
@@ -132,15 +131,6 @@ namespace Presentacion                                             //agregados d
             this.Contenido.Controls.Add(Newform);
             this.Contenido.Tag = Newform;
             Newform.Show();
-        }
-
-        private void ImgUser_Click(object sender, EventArgs e)
-        {
-            AbrirPestana(new Bienvenida());
-            ArrowAdminUser.Visible = false;
-            ArrowRepomov.Visible = false;
-            ArrowRepo.Visible = false;
-            ArrowProd.Visible = false;
         }
 
         private void BtLogout_Click(object sender, EventArgs e)
@@ -159,18 +149,27 @@ namespace Presentacion                                             //agregados d
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirPestana(new AdministrarUsuarios());
-            if (ArrowAdminUser.Visible == false)                            //Oculta o muestra el panel del submenu 
-            {                                                               //de Productos dependiendo su visibilidad 
-                ArrowAdminUser.Visible = true;
-                ArrowRepomov.Visible = false;
-                ArrowRepo.Visible = false;
-                ArrowProd.Visible = false;
+            if (button3.Width == 255)                                       //Oculta o muestra el panel del submenu 
+            {                                                               //de Productos dependiendo su visibilidad
+                BtAdministrarPro.Width = 250; //on=217 off=250
+                BtRepoInv.Width = 250;
+                BtReporteMov.Width = 250;
+                button3.Width = 230; //on=230 off=255
             }
         }
 
         private void MsgRol()
         {
             TxtRol.Text = LoginCache.Rol;
+        }
+
+        private void ImgUser_Click_1(object sender, EventArgs e)
+        {
+            AbrirPestana(new Bienvenida());
+            BtAdministrarPro.Width = 250; //on=217 off=250
+            BtRepoInv.Width = 250;
+            BtReporteMov.Width = 250;
+            button3.Width = 255; //on=230 off=255
         }
     }
 

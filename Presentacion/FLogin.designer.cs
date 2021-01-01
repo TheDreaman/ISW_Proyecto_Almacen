@@ -76,6 +76,7 @@
             // 
             // BtMin
             // 
+            this.BtMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtMin.Image = ((System.Drawing.Image)(resources.GetObject("BtMin.Image")));
             this.BtMin.Location = new System.Drawing.Point(271, 3);
             this.BtMin.Name = "BtMin";
@@ -87,6 +88,7 @@
             // 
             // BtClose
             // 
+            this.BtClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtClose.Image = ((System.Drawing.Image)(resources.GetObject("BtClose.Image")));
             this.BtClose.Location = new System.Drawing.Point(302, 3);
             this.BtClose.Name = "BtClose";

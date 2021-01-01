@@ -76,6 +76,9 @@
     <Compile Include="FPresentacion.Designer.cs">
       <DependentUpon>FPresentacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PictureBoxRounded.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ProdAdministrar.cs">
       <SubType>Form</SubType>
     </Compile>
