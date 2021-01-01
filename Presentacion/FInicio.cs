@@ -17,10 +17,22 @@ namespace Presentacion                                             //agregados d
     {
         public FInicio()
         {
-            InitializeComponent();
+            InitializeComponent();    
+        }
+
+        private void FInicio_Load(object sender, EventArgs e)
+        {
             AbrirPestana(new Bienvenida());
             VerIMGPerfil(ImgUser);
             MsgRol();
+            if(LoginCache.Rol == "Administrador")
+            {
+                button3.Visible = true;
+            }
+            else
+            {
+                button3.Visible = false;
+            }
         }
 
         private void BtCerrar_Click(object sender, EventArgs e)     //Evento Click en el PictureBox Cerrar
@@ -171,6 +183,8 @@ namespace Presentacion                                             //agregados d
             BtReporteMov.Width = 250;
             button3.Width = 255; //on=230 off=255
         }
+
+
     }
 
     

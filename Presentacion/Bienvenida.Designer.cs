@@ -36,8 +36,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(467, 205);
+            this.pictureBox1.Location = new System.Drawing.Point(433, 194);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 324);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -47,10 +48,11 @@
             // LblBienvenido
             // 
             this.LblBienvenido.AutoSize = true;
-            this.LblBienvenido.Font = new System.Drawing.Font("DIN", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBienvenido.Location = new System.Drawing.Point(234, 118);
+            this.LblBienvenido.Font = new System.Drawing.Font("DIN", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.LblBienvenido.Location = new System.Drawing.Point(34, 28);
             this.LblBienvenido.Name = "LblBienvenido";
-            this.LblBienvenido.Size = new System.Drawing.Size(441, 36);
+            this.LblBienvenido.Size = new System.Drawing.Size(418, 34);
             this.LblBienvenido.TabIndex = 1;
             this.LblBienvenido.Text = "Bienvenido :  Usuario promedio";
             // 
@@ -58,6 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 626);
             this.Controls.Add(this.LblBienvenido);
             this.Controls.Add(this.pictureBox1);

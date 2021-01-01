@@ -35,6 +35,7 @@
             this.BtMax = new System.Windows.Forms.PictureBox();
             this.BtCerrar = new System.Windows.Forms.PictureBox();
             this.LeftMenu = new System.Windows.Forms.Panel();
+            this.ImgUser = new Presentacion.PictureBoxRounded();
             this.TxtRol = new System.Windows.Forms.Label();
             this.BtLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -49,16 +50,15 @@
             this.BtReportes = new System.Windows.Forms.Button();
             this.BtProductos = new System.Windows.Forms.Button();
             this.Contenido = new System.Windows.Forms.Panel();
-            this.ImgUser = new Presentacion.PictureBoxRounded();
             this.TopBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtCerrar)).BeginInit();
             this.LeftMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
             this.PSubreportes.SuspendLayout();
             this.PSubProductos1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBarra
@@ -80,7 +80,7 @@
             this.BtRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtRes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtRes.Image = ((System.Drawing.Image)(resources.GetObject("BtRes.Image")));
-            this.BtRes.Location = new System.Drawing.Point(1246, 4);
+            this.BtRes.Location = new System.Drawing.Point(1251, 3);
             this.BtRes.Name = "BtRes";
             this.BtRes.Size = new System.Drawing.Size(20, 20);
             this.BtRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -94,7 +94,7 @@
             this.BtMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtMin.Image = ((System.Drawing.Image)(resources.GetObject("BtMin.Image")));
-            this.BtMin.Location = new System.Drawing.Point(1220, 3);
+            this.BtMin.Location = new System.Drawing.Point(1225, 3);
             this.BtMin.Name = "BtMin";
             this.BtMin.Size = new System.Drawing.Size(20, 20);
             this.BtMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +107,7 @@
             this.BtMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtMax.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtMax.Image = ((System.Drawing.Image)(resources.GetObject("BtMax.Image")));
-            this.BtMax.Location = new System.Drawing.Point(1246, 3);
+            this.BtMax.Location = new System.Drawing.Point(1251, 3);
             this.BtMax.Name = "BtMax";
             this.BtMax.Size = new System.Drawing.Size(20, 20);
             this.BtMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +120,7 @@
             this.BtCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtCerrar.Image")));
-            this.BtCerrar.Location = new System.Drawing.Point(1272, 3);
+            this.BtCerrar.Location = new System.Drawing.Point(1277, 3);
             this.BtCerrar.Name = "BtCerrar";
             this.BtCerrar.Size = new System.Drawing.Size(20, 20);
             this.BtCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,6 +144,17 @@
             this.LeftMenu.Name = "LeftMenu";
             this.LeftMenu.Size = new System.Drawing.Size(220, 626);
             this.LeftMenu.TabIndex = 1;
+            // 
+            // ImgUser
+            // 
+            this.ImgUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImgUser.Location = new System.Drawing.Point(0, 9);
+            this.ImgUser.Name = "ImgUser";
+            this.ImgUser.Size = new System.Drawing.Size(220, 180);
+            this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgUser.TabIndex = 0;
+            this.ImgUser.TabStop = false;
+            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click_1);
             // 
             // TxtRol
             // 
@@ -337,22 +348,12 @@
             // 
             // Contenido
             // 
+            this.Contenido.BackColor = System.Drawing.Color.White;
             this.Contenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenido.Location = new System.Drawing.Point(220, 24);
             this.Contenido.Name = "Contenido";
             this.Contenido.Size = new System.Drawing.Size(1080, 626);
             this.Contenido.TabIndex = 2;
-            // 
-            // ImgUser
-            // 
-            this.ImgUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ImgUser.Location = new System.Drawing.Point(0, 9);
-            this.ImgUser.Name = "ImgUser";
-            this.ImgUser.Size = new System.Drawing.Size(220, 180);
-            this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgUser.TabIndex = 0;
-            this.ImgUser.TabStop = false;
-            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click_1);
             // 
             // FInicio
             // 
@@ -366,6 +367,7 @@
             this.Name = "FInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FInicio_Load);
             this.TopBarra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMin)).EndInit();
@@ -373,9 +375,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtCerrar)).EndInit();
             this.LeftMenu.ResumeLayout(false);
             this.LeftMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
             this.PSubreportes.ResumeLayout(false);
             this.PSubProductos1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
             this.ResumeLayout(false);
 
         }
