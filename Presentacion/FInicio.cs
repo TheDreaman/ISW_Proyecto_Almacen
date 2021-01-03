@@ -109,7 +109,7 @@ namespace Presentacion                                             //agregados d
 
         private void BtRepoInv_Click(object sender, EventArgs e)
         {
-            if (BtRepoInv.Width == 250)                              //Mismo codigo que el panel de productos
+            if (BtRepoInv.Width == 250)                              //Mismo codigo que el panel de productos holax2(borrar)
             {
                 BtAdministrarPro.Width = 250; //on=217 off=250
                 BtRepoInv.Width = 217;
