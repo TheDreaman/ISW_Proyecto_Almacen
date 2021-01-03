@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class EliminarVentana : Form
     {
-        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";
+        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";//Server 
         SqlConnection conexion = new SqlConnection(conexionstring);
         public EliminarVentana()
         {
