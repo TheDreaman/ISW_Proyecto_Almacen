@@ -14,7 +14,7 @@ namespace Presentacion
     {
         public ProdAdministrar()
         {
-            InitializeComponent();
+            InitializeComponent();//Codigo
         }
     }
 }
