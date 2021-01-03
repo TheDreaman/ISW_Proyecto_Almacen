@@ -12,6 +12,7 @@ namespace Presentacion
 {
     public partial class NuevoUsuario : Form
     {
+
         public NuevoUsuario()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show("Se agregó correctamente");
         }
 
     
@@ -46,7 +47,7 @@ namespace Presentacion
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void fot_TextChanged(object sender, EventArgs e)
