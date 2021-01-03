@@ -35,7 +35,7 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se agregó correctamente");
+            MessageBox.Show("Se agregó correctamente");   //muestra un mensaje
         }
 
     
