@@ -70,11 +70,34 @@
     <Compile Include="FLogin.designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarVentana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarVentana.Designer.cs">
+      <DependentUpon>EliminarVentana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoVentana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoVentana.Designer.cs">
+      <DependentUpon>NuevoVentana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAgregar.Designer.cs">
+      <DependentUpon>VentanaAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPresentacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FPresentacion.Designer.cs">
       <DependentUpon>FPresentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="masterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PictureBoxRounded.cs">
       <SubType>Component</SubType>
@@ -105,6 +128,9 @@
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarVentana.resx">
+      <DependentUpon>EliminarVentana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FInicio.resx">
       <DependentUpon>FInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPresentacion.resx">
       <DependentUpon>FPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoVentana.resx">
+      <DependentUpon>NuevoVentana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProdAdministrar.resx">
       <DependentUpon>ProdAdministrar.cs</DependentUpon>
@@ -132,6 +161,20 @@
     <EmbeddedResource Include="ReporteMovimientos.resx">
       <DependentUpon>ReporteMovimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaAgregar.resx">
+      <DependentUpon>VentanaAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="masterDataSet.xsc">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterDataSet.xss">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
