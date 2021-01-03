@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class NuevoVentana : Form
     {
-        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";
+        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";//server
         SqlConnection conexion = new SqlConnection(conexionstring);
         public NuevoVentana()
         {
