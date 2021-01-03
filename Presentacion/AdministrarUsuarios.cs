@@ -16,5 +16,12 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario ventananv = new NuevoUsuario();
+            ventananv.Show();
+        }
+
     }
 }

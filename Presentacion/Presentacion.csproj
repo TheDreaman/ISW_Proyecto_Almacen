@@ -76,6 +76,12 @@
     <Compile Include="FPresentacion.Designer.cs">
       <DependentUpon>FPresentacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PictureBoxRounded.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPresentacion.resx">
       <DependentUpon>FPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProdAdministrar.resx">
       <DependentUpon>ProdAdministrar.cs</DependentUpon>
