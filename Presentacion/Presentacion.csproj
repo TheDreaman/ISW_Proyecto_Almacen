@@ -58,6 +58,12 @@
     <Compile Include="Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarVentana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarVentana.Designer.cs">
+      <DependentUpon>EliminarVentana.cs</DependentUpon>
+    </Compile>
     <Compile Include="FInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoVentana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoVentana.Designer.cs">
+      <DependentUpon>NuevoVentana.cs</DependentUpon>
+    </Compile>
     <Compile Include="PictureBoxRounded.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -105,11 +117,20 @@
     <Compile Include="ReporteMovimientos.Designer.cs">
       <DependentUpon>ReporteMovimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAgregar.Designer.cs">
+      <DependentUpon>VentanaAgregar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdministrarUsuarios.resx">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarVentana.resx">
+      <DependentUpon>EliminarVentana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FInicio.resx">
       <DependentUpon>FInicio.cs</DependentUpon>
@@ -122,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoVentana.resx">
+      <DependentUpon>NuevoVentana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProdAdministrar.resx">
       <DependentUpon>ProdAdministrar.cs</DependentUpon>
@@ -140,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteMovimientos.resx">
       <DependentUpon>ReporteMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaAgregar.resx">
+      <DependentUpon>VentanaAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
