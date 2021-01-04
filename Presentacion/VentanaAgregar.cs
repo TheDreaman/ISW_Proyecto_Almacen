@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class VentanaAgregar : Form
     {
-        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";
+        static string conexionstring = "Server=LAPTOP-TVTJEVPV;DataBase= Almacen;integrated security= true";
         SqlConnection conexion = new SqlConnection(conexionstring);
         public VentanaAgregar()
         {

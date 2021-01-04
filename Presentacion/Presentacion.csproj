@@ -94,6 +94,7 @@
     <Compile Include="NuevoVentana.Designer.cs">
       <DependentUpon>NuevoVentana.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVConexion.cs" />
     <Compile Include="PictureBoxRounded.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -116,6 +117,18 @@
     </Compile>
     <Compile Include="ReporteMovimientos.Designer.cs">
       <DependentUpon>ReporteMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VEditar.Designer.cs">
+      <DependentUpon>VEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VEliminar.Designer.cs">
+      <DependentUpon>VEliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaAgregar.cs">
       <SubType>Form</SubType>
@@ -164,6 +177,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteMovimientos.resx">
       <DependentUpon>ReporteMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VEditar.resx">
+      <DependentUpon>VEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VEliminar.resx">
+      <DependentUpon>VEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaAgregar.resx">
       <DependentUpon>VentanaAgregar.cs</DependentUpon>
