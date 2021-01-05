@@ -141,7 +141,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "NuevoVentana";
-            this.Text = "NuevoVentana";
+            this.Text = "Nuevo Producto";
             this.Load += new System.EventHandler(this.NuevoVentana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

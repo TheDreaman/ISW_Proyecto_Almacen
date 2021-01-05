@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class NuevoVentana : Form
     {
-        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";//server
+        static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";//server
         SqlConnection conexion = new SqlConnection(conexionstring);
         public NuevoVentana()
         {
@@ -24,12 +24,23 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //  Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor]) values ('','','','')
-            string query = "Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor],[Merma]) values ('" + numericUpDown1.Value + "','" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "','0')";
-            SqlCommand comando = new SqlCommand(query, conexion);
+            if ((textBox1.Text == "") || (textBox2.Text=="") || (textBox3.Text==""))
+            {
+                MessageBox.Show("Debes llenar todos los campos de texto. ");
+            }
+            
+            else
+            {
+                //  Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor]) values ('','','','')
+                string query = "Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor],[Merma]) values ('" + numericUpDown1.Value + "','" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "','0')";
+                SqlCommand comando = new SqlCommand(query, conexion);
 
-            comando.ExecuteNonQuery();
-            this.Close();
+                comando.ExecuteNonQuery();
+                this.Close();
+            
+
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

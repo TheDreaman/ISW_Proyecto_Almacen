@@ -15,19 +15,35 @@ namespace Presentacion
 {
     public partial class VentanaAgregar : Form
     {
-        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";
+        static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";
         SqlConnection conexion = new SqlConnection(conexionstring);
         public VentanaAgregar()
         {
             InitializeComponent();
             conexion.Open();
+            textBox2.Visible = false;
+            textBox4.Visible = false;
+            button1.Visible = false;
+            label2.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            comboBox1.Visible = false;
+            numericUpDown1.Visible = false;
+            
+           
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
+        
         {
+            conexion.Open();
             if (comboBox1.Text == "Agregar")
             {
+              
                 int flag = 0;
                 string query = "Update Productos set Cantidad = Cantidad+(" + numericUpDown1.Value + ") where ID_Producto = '" + textBox1.Text + "'";
                 SqlCommand comando = new SqlCommand(query, conexion);
@@ -48,6 +64,7 @@ namespace Presentacion
                 }
             }
             if (comboBox1.Text == "Quitar")
+
             {
                 int flag = 0;
                 string query = "Update Productos set Cantidad = Cantidad+(-" + numericUpDown1.Value + ") where ID_Producto = '" + textBox1.Text + "'and Cantidad >="+numericUpDown1.Value+"";
@@ -65,7 +82,7 @@ namespace Presentacion
                 }
                 else
                 {
-                    MessageBox.Show("Error, verifica la cantidad o los datos proporcionados.");
+                    MessageBox.Show("Error. Verifica la cantidad proporcionada.");
                 }
             }
             if (comboBox1.Text == "Merma")
@@ -88,9 +105,13 @@ namespace Presentacion
                 }
                 else
                 {
-                    MessageBox.Show("Error, verifica la cantidad o los datos proporcionados.");
+                    MessageBox.Show("Error. Verifica la cantidad proporcionada.");
                 }
 
+            }
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("No seleccionaste una opción");
             }
             this.Close();
         }
@@ -118,6 +139,50 @@ namespace Presentacion
         private void VentanaAgregar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            string query = "Select * from Productos where ID_Producto ='"+textBox1.Text+"'";
+            SqlCommand comando = new SqlCommand(query, conexion);
+
+           
+            
+                textBox2.Visible = true;
+                textBox4.Visible = true;
+                button1.Visible = true;
+                label2.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                comboBox1.Visible = true;
+                numericUpDown1.Visible = true;
+               
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
+                    textBox2.Text = registro["Proveedor"].ToString();
+                    textBox4.Text = registro["Nombre_Producto"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el SKU");
+                this.Close();
+            }
+
+            conexion.Close();
         }
     }
 }
