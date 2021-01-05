@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class NuevoVentana : Form
     {
-        static string conexionstring = "Server=LAPTOP-TVTJEVPV;DataBase= Almacen;integrated security= true";//server
+        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";//server
         SqlConnection conexion = new SqlConnection(conexionstring);
         public NuevoVentana()
         {
@@ -48,6 +48,11 @@ namespace Presentacion
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuevoVentana_Load(object sender, EventArgs e)
         {
 
         }

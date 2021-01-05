@@ -147,6 +147,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdministrarUsuarios";
             this.Text = "AdministrarUsuarios";
+            this.Load += new System.EventHandler(this.AdministrarUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mostrarusu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

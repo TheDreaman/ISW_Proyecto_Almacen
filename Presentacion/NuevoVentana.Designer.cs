@@ -142,6 +142,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "NuevoVentana";
             this.Text = "NuevoVentana";
+            this.Load += new System.EventHandler(this.NuevoVentana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

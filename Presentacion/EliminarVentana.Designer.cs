@@ -76,6 +76,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "EliminarVentana";
             this.Text = "EliminarVentana";
+            this.Load += new System.EventHandler(this.EliminarVentana_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

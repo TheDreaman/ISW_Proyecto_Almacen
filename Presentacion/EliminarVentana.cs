@@ -15,7 +15,7 @@ namespace Presentacion
 
     public partial class EliminarVentana : Form
     {
-        static string conexionstring = "Server=LAPTOP-TVTJEVPV;DataBase= Almacen;integrated security= true";//Server 
+        static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";//Server 
         SqlConnection conexion = new SqlConnection(conexionstring);
         public EliminarVentana()
         {
@@ -42,6 +42,11 @@ namespace Presentacion
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EliminarVentana_Load(object sender, EventArgs e)
         {
 
         }
