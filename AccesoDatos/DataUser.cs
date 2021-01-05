@@ -30,6 +30,7 @@ namespace AccesoDatos
                         {
                             LoginCache.ID = Reader.GetInt32(0);
                             LoginCache.Matricula = Reader.GetInt32(1);
+                            LoginCache.usuario = Reader.GetString(2);
                             LoginCache.Name1 = Reader.GetString(4);
                             LoginCache.Apellido = Reader.GetString(5);
                             LoginCache.Rol = Reader.GetString(6);

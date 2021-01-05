@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 
 namespace Presentacion
 {
+
     public partial class EliminarVentana : Form
     {
         static string conexionstring = "Server=DESKTOP-D3SCCDM;DataBase= Almacen;integrated security= true";//Server 
@@ -30,10 +31,19 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "Delete from Productos where Nombre_Producto = '" + textBox1.Text + "'";
+        
+            //---------------------------------------------------------------------------------
+            string query = "Delete from Productos where ID_Producto = '" + textBox1.Text + "'";
             SqlCommand comando = new SqlCommand(query, conexion);
             comando.ExecuteNonQuery();
+            //----------------------------------------------------------------------------------
+            
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
