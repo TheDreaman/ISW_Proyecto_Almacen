@@ -15,7 +15,7 @@ namespace Presentacion
 {
     public partial class ProdAdministrar : Form
     {
-        static string conexionstring = "Server=LAPTOP-TVTJEVPV;DataBase= Almacen;integrated security= true";
+        static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";
         SqlConnection conexion = new SqlConnection(conexionstring);
        
 
@@ -29,6 +29,12 @@ namespace Presentacion
             DataTable tablaP = new DataTable();
             data.Fill(tablaP);
             dataGridView1.DataSource = tablaP;
+            if (LoginCache.Rol == "Usuario")
+
+            {
+                EliminarButton.Visible = false;
+            }
+
         }
 
         private void ProdAdministrar_Load(object sender, EventArgs e)
@@ -79,22 +85,13 @@ namespace Presentacion
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            if (LoginCache.Rol == "Administrador")
-            {
-
+            
                 Form Agregar1 = new EliminarVentana();
 
 
                 Agregar1.Show();
 
-
-
-            }
-            if (LoginCache.Rol == "Usuario")
-
-            {
-                MessageBox.Show("No tienes accesso");
-            }
+   
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -105,6 +102,16 @@ namespace Presentacion
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string query = "Select * from Productos";
+            SqlCommand comando = new SqlCommand(query, conexion);
+            SqlDataAdapter data = new SqlDataAdapter(comando);
+            DataTable tablaP = new DataTable();
+            data.Fill(tablaP);
+            dataGridView1.DataSource = tablaP;
         }
     }
 }

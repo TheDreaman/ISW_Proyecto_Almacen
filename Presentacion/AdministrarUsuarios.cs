@@ -50,5 +50,10 @@ namespace Presentacion
         {
 
         }
+
+        private void AdministrarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
