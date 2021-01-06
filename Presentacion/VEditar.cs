@@ -18,76 +18,6 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void TitulodeVentana2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ape2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nusu2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cargo2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void apellido2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUsuario2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Roles2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void car2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Contraseña2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Correo2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nombre2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Foto2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Rol2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void M2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Cancelar2_Click(object sender, EventArgs e)
         {
             Close();
@@ -106,25 +36,6 @@ namespace Presentacion
             }
         }
 
-        private void fot2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contrase2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void corre2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nomb2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void matri2_TextChanged(object sender, EventArgs e)
         {

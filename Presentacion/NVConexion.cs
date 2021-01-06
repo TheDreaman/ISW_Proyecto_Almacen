@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Auxiliar.Cache;
 
 namespace Presentacion
 {
@@ -32,15 +33,16 @@ namespace Presentacion
             }
         }
 
-        public void Insertar(int mat, string userna, string contraseña, string nombr, string apelli, string rol, string correo,string carg)
+        public void Insertar(int mat, string userna, string contraseña, string nombr, string apelli, string rol, string correo, string carg)
         {
             
             try
             {
                 if ((userna != "") || (contraseña != "") || (nombr != "") || (apelli != "") || (rol != "") || (correo != "") || (carg != ""))
                 {
-                    cmd = new SqlCommand("Insert into Users(Matricula,UserName,Password,Name1,Apellido,Rol,Email,Cargo) values(" + mat + ",'" + userna + "','" + contraseña + "','" + nombr + "','" + apelli + "','" + rol + "','" + correo + "','" + carg + "')", cn);
-                     cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand("Insert into Users(Matricula,UserName,Password,Name1,Apellido,Rol,Email,Picture,Cargo) values(" + mat + ",'" + userna + "','" + contraseña + "','" + nombr + "','" + apelli + "','" + rol + "','" + correo + "',@Pic ,'" + carg + "')", cn);
+                    cmd.Parameters.AddWithValue("@Pic", LoginCache.Picture2);
+                    cmd.ExecuteNonQuery();
                     MessageBox.Show("Usuario Agregado.");
                 }
               
