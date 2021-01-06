@@ -32,7 +32,6 @@
             this.nomb = new System.Windows.Forms.TextBox();
             this.corre = new System.Windows.Forms.TextBox();
             this.contrase = new System.Windows.Forms.TextBox();
-            this.fot = new System.Windows.Forms.TextBox();
             this.AgregarUsuario = new System.Windows.Forms.Button();
             this.Cancelar = new System.Windows.Forms.Button();
             this.Matricula = new System.Windows.Forms.Label();
@@ -49,6 +48,10 @@
             this.cargo = new System.Windows.Forms.Label();
             this.apellido = new System.Windows.Forms.Label();
             this.NUsuario = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.foto1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // matri
@@ -82,14 +85,6 @@
             this.contrase.Size = new System.Drawing.Size(276, 20);
             this.contrase.TabIndex = 4;
             this.contrase.TextChanged += new System.EventHandler(this.contrase_TextChanged);
-            // 
-            // fot
-            // 
-            this.fot.Location = new System.Drawing.Point(91, 231);
-            this.fot.Name = "fot";
-            this.fot.Size = new System.Drawing.Size(276, 20);
-            this.fot.TabIndex = 5;
-            this.fot.TextChanged += new System.EventHandler(this.fot_TextChanged);
             // 
             // AgregarUsuario
             // 
@@ -183,12 +178,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(285, 9);
+            this.label1.Location = new System.Drawing.Point(274, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 42);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nuevo Usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // Roles
             // 
@@ -260,12 +256,44 @@
             this.NUsuario.Text = "UserName";
             this.NUsuario.Click += new System.EventHandler(this.NUsuario_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(2, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(798, 68);
+            this.panel1.TabIndex = 28;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "fot";
+            this.openFileDialog1.Filter = "JPG|*.jpg|PNG|*.png";
+            this.openFileDialog1.Title = "fot";
+            // 
+            // foto1
+            // 
+            this.foto1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.foto1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.foto1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.foto1.Location = new System.Drawing.Point(93, 231);
+            this.foto1.Name = "foto1";
+            this.foto1.Size = new System.Drawing.Size(274, 31);
+            this.foto1.TabIndex = 29;
+            this.foto1.Text = "Seleccionar Foto";
+            this.foto1.UseVisualStyleBackColor = false;
+            this.foto1.Click += new System.EventHandler(this.foto1_Click);
+            // 
             // NuevoUsuario
             // 
+            this.AcceptButton = this.AgregarUsuario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.foto1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.car);
             this.Controls.Add(this.ape);
             this.Controls.Add(this.nusu);
@@ -273,7 +301,6 @@
             this.Controls.Add(this.apellido);
             this.Controls.Add(this.NUsuario);
             this.Controls.Add(this.Roles);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.Correo);
             this.Controls.Add(this.Nombre);
@@ -282,7 +309,6 @@
             this.Controls.Add(this.Matricula);
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.AgregarUsuario);
-            this.Controls.Add(this.fot);
             this.Controls.Add(this.contrase);
             this.Controls.Add(this.corre);
             this.Controls.Add(this.nomb);
@@ -293,6 +319,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoUsuario";
             this.Load += new System.EventHandler(this.NuevoUsuario_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +340,6 @@
         public System.Windows.Forms.TextBox nomb;
         public System.Windows.Forms.TextBox corre;
         public System.Windows.Forms.TextBox contrase;
-        public System.Windows.Forms.TextBox fot;
         public System.Windows.Forms.ComboBox Roles;
         public System.Windows.Forms.TextBox car;
         public System.Windows.Forms.TextBox ape;
@@ -320,5 +347,8 @@
         private System.Windows.Forms.Label cargo;
         private System.Windows.Forms.Label apellido;
         private System.Windows.Forms.Label NUsuario;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button foto1;
     }
 }

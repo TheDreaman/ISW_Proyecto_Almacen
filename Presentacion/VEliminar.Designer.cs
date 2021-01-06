@@ -33,6 +33,7 @@
             this.EliminarMatricula = new System.Windows.Forms.Label();
             this.cancelarE = new System.Windows.Forms.Button();
             this.MEliminar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // EliminarM
@@ -48,12 +49,13 @@
             this.NVentana.AutoSize = true;
             this.NVentana.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NVentana.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.NVentana.Location = new System.Drawing.Point(154, 19);
+            this.NVentana.Location = new System.Drawing.Point(153, 18);
             this.NVentana.Name = "NVentana";
             this.NVentana.Size = new System.Drawing.Size(151, 42);
             this.NVentana.TabIndex = 8;
             this.NVentana.Text = "Eliminar";
             this.NVentana.Click += new System.EventHandler(this.NVentana_Click);
+            this.NVentana.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NVentana_MouseMove);
             // 
             // EliminarMatricula
             // 
@@ -95,14 +97,25 @@
             this.MEliminar.UseVisualStyleBackColor = false;
             this.MEliminar.Click += new System.EventHandler(this.MEliminar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(473, 59);
+            this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
             // VEliminar
             // 
+            this.AcceptButton = this.MEliminar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(497, 292);
-            this.Controls.Add(this.EliminarM);
             this.Controls.Add(this.NVentana);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.EliminarM);
             this.Controls.Add(this.EliminarMatricula);
             this.Controls.Add(this.cancelarE);
             this.Controls.Add(this.MEliminar);
@@ -111,6 +124,7 @@
             this.Name = "VEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VEliminar";
+            this.Load += new System.EventHandler(this.VEliminar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +137,6 @@
         private System.Windows.Forms.Label EliminarMatricula;
         private System.Windows.Forms.Button cancelarE;
         private System.Windows.Forms.Button MEliminar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

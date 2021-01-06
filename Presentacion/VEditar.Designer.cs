@@ -49,6 +49,8 @@
             this.corre2 = new System.Windows.Forms.TextBox();
             this.nomb2 = new System.Windows.Forms.TextBox();
             this.matri2 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // car2
@@ -125,12 +127,13 @@
             // 
             this.TitulodeVentana2.AutoSize = true;
             this.TitulodeVentana2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitulodeVentana2.Location = new System.Drawing.Point(254, 24);
+            this.TitulodeVentana2.Location = new System.Drawing.Point(250, 20);
             this.TitulodeVentana2.Name = "TitulodeVentana2";
             this.TitulodeVentana2.Size = new System.Drawing.Size(254, 42);
             this.TitulodeVentana2.TabIndex = 56;
             this.TitulodeVentana2.Text = "Editar Usuario";
             this.TitulodeVentana2.Click += new System.EventHandler(this.TitulodeVentana2_Click);
+            this.TitulodeVentana2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitulodeVentana2_MouseMove);
             // 
             // Contraseña2
             // 
@@ -264,12 +267,23 @@
             this.matri2.TabIndex = 43;
             this.matri2.TextChanged += new System.EventHandler(this.matri2_TextChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.TitulodeVentana2);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(793, 74);
+            this.panel1.TabIndex = 64;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
             // VEditar
             // 
+            this.AcceptButton = this.AgregarUsuario2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.car2);
             this.Controls.Add(this.ape2);
             this.Controls.Add(this.nusu2);
@@ -277,7 +291,6 @@
             this.Controls.Add(this.apellido2);
             this.Controls.Add(this.NUsuario2);
             this.Controls.Add(this.Roles2);
-            this.Controls.Add(this.TitulodeVentana2);
             this.Controls.Add(this.Contraseña2);
             this.Controls.Add(this.Correo2);
             this.Controls.Add(this.Nombre2);
@@ -296,6 +309,9 @@
             this.Name = "VEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VEditar";
+            this.Load += new System.EventHandler(this.VEditar_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +340,6 @@
         public System.Windows.Forms.TextBox corre2;
         public System.Windows.Forms.TextBox nomb2;
         public System.Windows.Forms.TextBox matri2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
