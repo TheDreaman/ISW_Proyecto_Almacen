@@ -18,5 +18,9 @@ namespace Dominio
         {
             return DataUser.ConsultaIMG(ID);
         }
+        public byte[] ConsultaIMGMatri(int Matri)
+        {
+            return DataUser.ConsultaIMGMatri(Matri);
+        }
     }
 }

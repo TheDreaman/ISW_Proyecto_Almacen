@@ -86,9 +86,10 @@
             // AgregarUsuario
             // 
             this.AgregarUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AgregarUsuario.FlatAppearance.BorderSize = 0;
             this.AgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AgregarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgregarUsuario.Location = new System.Drawing.Point(420, 385);
+            this.AgregarUsuario.Location = new System.Drawing.Point(430, 387);
             this.AgregarUsuario.Name = "AgregarUsuario";
             this.AgregarUsuario.Size = new System.Drawing.Size(194, 53);
             this.AgregarUsuario.TabIndex = 6;
@@ -99,6 +100,7 @@
             // Cancelar
             // 
             this.Cancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Cancelar.FlatAppearance.BorderSize = 0;
             this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelar.Location = new System.Drawing.Point(630, 385);
@@ -253,6 +255,7 @@
             // foto1
             // 
             this.foto1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.foto1.FlatAppearance.BorderSize = 0;
             this.foto1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.foto1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.foto1.Location = new System.Drawing.Point(493, 338);

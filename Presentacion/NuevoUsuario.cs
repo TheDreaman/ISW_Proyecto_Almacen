@@ -31,6 +31,7 @@ namespace Presentacion
 
                 if (c.personaRegistrada(Convert.ToInt32(matri.Text)) == 0)
                 {
+                    LoginCache.Picture2 = null;
                     Stream mystream = openFileDialog1.OpenFile();
                     using (MemoryStream ms = new MemoryStream())
                     {
@@ -48,6 +49,7 @@ namespace Presentacion
             }
             catch(Exception ex)
             {
+                MessageBox.Show("Ingrese un usuario valido.");
                 Close();
                
             }
@@ -119,13 +121,18 @@ namespace Presentacion
         
         private void foto1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            LoginCache.URL = null;
+            //openFileDialog1.ShowDialog();
             openFileDialog1.InitialDirectory="c:\\";
             openFileDialog1.Filter= "Archivos jpg (*.jpg)|*.jpg|Archivos png (*.png)|*.png";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
-            LoginCache.URL = openFileDialog1.FileName;
-            PicNewUser.Image = Image.FromFile(openFileDialog1.FileName);
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                LoginCache.URL = openFileDialog1.FileName;
+                PicNewUser.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+            
         }
     }
 

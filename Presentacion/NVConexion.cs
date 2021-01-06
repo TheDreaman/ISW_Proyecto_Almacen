@@ -8,6 +8,8 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Auxiliar.Cache;
+using Dominio;
+using System.Drawing;
 
 namespace Presentacion
 {
@@ -94,14 +96,17 @@ namespace Presentacion
             }
         }
 
-        public void llenartexboxconsulta(int matr, TextBox txtusuario, TextBox txtnombre, TextBox txtapellido, TextBox txtcontrase, ComboBox txtrol, TextBox txtcorreo, TextBox txtcargo)
+        public void llenartexboxconsulta(int matr, TextBox txtusuario, TextBox txtnombre, TextBox txtapellido, TextBox txtcontrase, ComboBox txtrol, TextBox txtcorreo, TextBox txtcargo, PictureBoxRounded IMG)
         {
             try
             {
+                ModeloUsuario user = new ModeloUsuario();
+                
                 cmd = new SqlCommand("Select * from Users where Matricula=" + matr + "", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
+                    user.ConsultaIMGMatri(matr);
                     txtusuario.Text = dr["UserName"].ToString();
                     txtnombre.Text = dr["Password"].ToString();
                     txtapellido.Text = dr["Name1"].ToString();
@@ -109,6 +114,7 @@ namespace Presentacion
                     txtrol.Text = dr["Rol"].ToString();
                     txtcorreo.Text = dr["Email"].ToString();
                     txtcargo.Text = dr["Cargo"].ToString();
+                    VerIMG(IMG, matr, LoginCache.Picture3);
 
                 }
                 dr.Close();
@@ -117,6 +123,12 @@ namespace Presentacion
             {
                 MessageBox.Show("No se pudo llenar los campos." + ex.ToString());
             }
+        }
+
+        public void VerIMG(PictureBoxRounded Pic, int Matri, byte[] PictureBytes)
+        {    
+            System.IO.MemoryStream MStream = new System.IO.MemoryStream(PictureBytes);
+            Pic.Image = System.Drawing.Bitmap.FromStream(MStream);
         }
 
         public void actualizar(int matric, string usuario, string con, string nombre, string apellido, string rol, string correo, string cargo)
@@ -130,8 +142,9 @@ namespace Presentacion
                 }
                 else
                 {
-                     cmd = new SqlCommand("Update Users set UserName='" + usuario + "', Password='" + con + "', Name1='" + nombre + "',Apellido='" + apellido + "', Rol='" + rol + "', Email='" + correo + "', Cargo='" + cargo + "' where Matricula=" + matric + "", cn);
-                     cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand("Update Users set UserName='" + usuario + "', Password='" + con + "', Name1='" + nombre + "',Apellido='" + apellido + "', Rol='" + rol + "', Email='" + correo + "', Picture=@Pic, Cargo='" + cargo + "' where Matricula=" + matric + "", cn);
+                    cmd.Parameters.AddWithValue("@Pic", LoginCache.Picture2);
+                    cmd.ExecuteNonQuery();
                     MessageBox.Show("Datos actualizados.");
                 }
                 

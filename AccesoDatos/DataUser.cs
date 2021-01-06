@@ -64,5 +64,23 @@ namespace AccesoDatos
                 return Data;
             }
         }
+
+        public byte[] ConsultaIMGMatri(int Matri)
+        {
+            using (var Conect = GetConnection())
+            {
+                Conect.Open();
+                SqlDataAdapter DA = new SqlDataAdapter();
+                DA = new SqlDataAdapter("select Picture from Users where Matricula = '" + Matri + "'", Conect);
+                DataSet DS = new DataSet();
+                DA.Fill(DS, "Users");
+                byte[] Data = new byte[0];
+                DataRow DR;
+                DR = DS.Tables["Users"].Rows[0];
+                Data = (byte[])DR["Picture"];
+                LoginCache.Picture3 = Data;
+                return Data;
+            }
+        }
     }
 }

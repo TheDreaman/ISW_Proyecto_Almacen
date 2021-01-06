@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Auxiliar.Cache;
+using System.IO;
 
 namespace Presentacion
 {
@@ -27,6 +29,13 @@ namespace Presentacion
         {
             try
             {
+                LoginCache.Picture2 = null;
+                Stream mystream = openFileDialog1.OpenFile();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    mystream.CopyTo(ms);
+                    LoginCache.Picture2 = ms.ToArray();
+                }
                 c.actualizar(Convert.ToInt32(matri2.Text), nusu2.Text, contrase2.Text, nomb2.Text, ape2.Text, Roles2.Text, corre2.Text, car2.Text);
                 Close();
             }
@@ -44,7 +53,7 @@ namespace Presentacion
             {
                 if (c.personaRegistrada(Convert.ToInt32(matri2.Text)) > 0)
                 {
-                    c.llenartexboxconsulta(Convert.ToInt32(matri2.Text), nusu2, contrase2, nomb2, ape2, Roles2, corre2, car2);
+                    c.llenartexboxconsulta(Convert.ToInt32(matri2.Text), nusu2, contrase2, nomb2, ape2, Roles2, corre2, car2, PicCambioUser);
                     AgregarUsuario2.Enabled = true;           //activa el boton de agregar si existe el usuario
                 }
                 else
@@ -56,6 +65,7 @@ namespace Presentacion
                     Roles2.Text = "";
                     corre2.Text = "";
                     car2.Text = "";
+                    PicCambioUser.Image = null;
                     AgregarUsuario2.Enabled = false;
                 }
             }
@@ -98,6 +108,20 @@ namespace Presentacion
             {
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
+            }
+        }
+
+        private void BtnSelecIMGCambio_Click(object sender, EventArgs e)
+        {
+            LoginCache.URL = null;
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Archivos jpg (*.jpg)|*.jpg|Archivos png (*.png)|*.png";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                LoginCache.URL = openFileDialog1.FileName;
+                PicCambioUser.Image = Image.FromFile(openFileDialog1.FileName);
             }
         }
     }
