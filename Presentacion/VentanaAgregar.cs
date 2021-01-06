@@ -151,7 +151,7 @@ namespace Presentacion
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//Ejecuta el codigo
         {
            
             string query = "Select * from Productos where ID_Producto ='"+textBox1.Text+"'";
