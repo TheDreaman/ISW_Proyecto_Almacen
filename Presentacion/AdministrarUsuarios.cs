@@ -24,20 +24,20 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NuevoUsuario ventananv = new NuevoUsuario();
-            ventananv.Show();
+            Form NewForm = new NuevoUsuario();
+            NewForm.ShowDialog();
         }
 
         private void eliminar_Click(object sender, EventArgs e)
         {
-            VEliminar ventananE = new VEliminar();
-            ventananE.Show();
+            Form NewForm = new VEliminar();
+            NewForm.ShowDialog();
         }
 
         private void editar_Click(object sender, EventArgs e)
         {
-            VEditar ventanaE = new VEditar();
-            ventanaE.Show();
+            Form NewForm = new VEditar();
+            NewForm.ShowDialog();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)

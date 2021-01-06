@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Auxiliar.Cache;
 
 namespace Presentacion
 {
@@ -28,24 +29,34 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se conecto a la base de datos." + ToString());
+                MessageBox.Show("No se conecto a la base de datos." + ex.ToString());
             }
         }
 
-        public string Insertar(int mat, string userna, string contraseña, string nombr, string apelli, string rol, string correo, string carg)
+        public void Insertar(int mat, string userna, string contraseña, string nombr, string apelli, string rol, string correo, string carg)
         {
-            string salida = "Usuario Agregado";
+            
             try
             {
-                cmd = new SqlCommand("Insert into Users(Matricula,UserName,Password,Name1,Apellido,Rol,Email,Cargo) values(" + mat + ",'" + userna + "','" + contraseña + "','" + nombr + "','" + apelli + "','" + rol + "','" + correo + "','" + carg + "')", cn);
-                cmd.ExecuteNonQuery();
-
+                if ((userna != "") || (contraseña != "") || (nombr != "") || (apelli != "") || (rol != "") || (correo != "") || (carg != ""))
+                {
+                    cmd = new SqlCommand("Insert into Users(Matricula,UserName,Password,Name1,Apellido,Rol,Email,Picture,Cargo) values(" + mat + ",'" + userna + "','" + contraseña + "','" + nombr + "','" + apelli + "','" + rol + "','" + correo + "',@Pic ,'" + carg + "')", cn);
+                    cmd.Parameters.AddWithValue("@Pic", LoginCache.Picture2);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Usuario Agregado.");
+                }
+              
             }
             catch (Exception ex)
             {
-                salida = "No se registro.";
+                MessageBox.Show("No se registro."); 
             }
-            return salida;
+            
+        }
+
+        internal void insertarimagen(string pic)
+        {
+            throw new NotImplementedException();
         }
 
         public int personaRegistrada(int mat)
@@ -79,7 +90,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo llenar.");
+                MessageBox.Show("No se puedo llenar." + ex.ToString());
             }
         }
 
@@ -108,20 +119,62 @@ namespace Presentacion
             }
         }
 
-        public string actualizar(int matric, string usuario, string con, string nombre, string apellido, string rol, string correo, string cargo)
+        public void actualizar(int matric, string usuario, string con, string nombre, string apellido, string rol, string correo, string cargo)
         {
-            string salida = "Se actualizaron los datos";
+            
             try
             {
-                cmd = new SqlCommand("Update Users set UserName='" + usuario + "', Password='" + con + "', Name1='" + nombre + "',Apellido='" + apellido + "', Rol='" + rol + "', Email='" + correo + "', Cargo='" + cargo + "' where Matricula=" + matric + "", cn);
+                if ((usuario == "") || (con == "") || (nombre == "") || (apellido == "") || (rol == "") || (correo == "") || (cargo == ""))
+                {
+                    MessageBox.Show("Verifique si están bien los datos ingresados.");
+                }
+                else
+                {
+                     cmd = new SqlCommand("Update Users set UserName='" + usuario + "', Password='" + con + "', Name1='" + nombre + "',Apellido='" + apellido + "', Rol='" + rol + "', Email='" + correo + "', Cargo='" + cargo + "' where Matricula=" + matric + "", cn);
+                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Datos actualizados.");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se actualizo.");  //manda mesaje en una ventana
+            }
+            
+        }
+
+        public string eliminar(int mat)
+        {
+            string salida = "Usuario Eliminado";
+            try
+            {
+                cmd = new SqlCommand("Delete from Users where Matricula = " + mat + "", cn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                salida = "No se actualizo." + ex.ToString();  //manda mesaje en una ventana
+                salida = "No se Elimino."+ex.ToString();
             }
             return salida;
         }
 
+        public string insertarimagen(PictureBox img)
+        {
+            string mensaje = "Se inserto la imagen.";
+            try
+            {
+                cmd = new SqlCommand("Insert into Users values(@Picture)",cn);
+                cmd.Parameters.Add("@Picture", SqlDbType.Image);
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                img.Image.Save(ms,System.Drawing.Imaging.ImageFormat.Png);
+                cmd.Parameters["@Picture"].Value = ms.GetBuffer();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                mensaje = "No se inserto la imagen" + ex.ToString();
+            }
+            return mensaje;
+        }
     }
 }
