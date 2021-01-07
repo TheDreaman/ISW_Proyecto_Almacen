@@ -45,7 +45,7 @@ namespace Presentacion
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            //se declaran los paraametros
+            //se declaran los parametros
 
             DateTime Fecha1 = dtpDesde.Value;
             DateTime Fecha2 = dtpHasta.Value;
