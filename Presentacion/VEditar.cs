@@ -43,8 +43,8 @@ namespace Presentacion
                 }
                 c.actualizar(Convert.ToInt32(matri2.Text), nusu2.Text, contrase2.Text, nomb2.Text, ape2.Text, Roles2.Text, corre2.Text, car2.Text);
                 Close();
-            }
-            catch (Exception)
+           }
+           catch (Exception)
             {
                 MessageBox.Show("Verifique si están bien los datos ingresados.");
             }
@@ -139,6 +139,9 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
     }
 }
+
+

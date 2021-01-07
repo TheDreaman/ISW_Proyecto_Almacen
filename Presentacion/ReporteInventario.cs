@@ -16,5 +16,13 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void ReporteInventario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'DataSet1.Productos' Puede moverla o quitarla según sea necesario.
+            this.ProductosTableAdapter.Fill(this.DataSet1.Productos);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

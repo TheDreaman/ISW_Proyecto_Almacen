@@ -18,7 +18,7 @@ namespace Presentacion
     {
         NVConexion c = new NVConexion();
         private bool editar = false;
-        //private readonly DataGridView mostrarusu;
+       // private readonly DataGridView mostrarusu;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);

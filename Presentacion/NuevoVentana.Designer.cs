@@ -81,7 +81,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(175, 335);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Cantidad";
             // 
@@ -92,7 +92,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(175, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 40);
+            this.label3.Size = new System.Drawing.Size(103, 42);
             this.label3.TabIndex = 15;
             this.label3.Text = "Nombre \r\ndel producto";
             // 
@@ -103,7 +103,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(175, 189);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 14;
             this.label2.Text = "Provedor";
             // 
@@ -165,7 +165,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(274, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(295, 46);
+            this.label5.Size = new System.Drawing.Size(285, 46);
             this.label5.TabIndex = 19;
             this.label5.Text = "Nuevo producto";
             // 
@@ -186,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);

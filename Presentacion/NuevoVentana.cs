@@ -17,26 +17,29 @@ namespace Presentacion
     {
         static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";//server
         SqlConnection conexion = new SqlConnection(conexionstring);/// <summary>
-        //pruenaaaaaaaaaaaaaaaa
-        /// </summary>
-        /// 
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
         public NuevoVentana()
         {
             InitializeComponent();
             conexion.Open();
-            InitializeComponent();
+            
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text == "") || (textBox2.Text=="") || (textBox3.Text==""))
+            if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
             {
                 MessageBox.Show("Debes llenar todos los campos de texto. ");
+                string query = "Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor],[Merma]) values ('" + numericUpDown1.Value + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','0')";
+                SqlCommand comando = new SqlCommand(query, conexion);
+
+                comando.ExecuteNonQuery();
+                this.Close();
             }
-            
+
             else
             {
                 //  Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor]) values ('','','','')
@@ -45,7 +48,7 @@ namespace Presentacion
 
                 comando.ExecuteNonQuery();
                 this.Close();
-            
+
 
             }
 
