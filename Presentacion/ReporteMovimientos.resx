@@ -123,6 +123,35 @@
   <metadata name="DataSetMovimientoFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="Rango_fechaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>490, 17</value>
   </metadata>

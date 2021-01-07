@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Auxiliar.Cache;
+using System.Runtime.InteropServices;
 
 
 namespace Presentacion
@@ -17,6 +18,9 @@ namespace Presentacion
     {
         static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";
         SqlConnection conexion = new SqlConnection(conexionstring);
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
         public VentanaAgregar()
         {
             InitializeComponent();
@@ -31,10 +35,8 @@ namespace Presentacion
             label5.Visible = false;
             comboBox1.Visible = false;
             numericUpDown1.Visible = false;
-            
-           
 
-
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,41 +118,6 @@ namespace Presentacion
             this.Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VentanaAgregar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)//Ejecuta el codigo
         {
            
@@ -183,6 +150,22 @@ namespace Presentacion
             }
 
             conexion.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void VentanaAgregar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

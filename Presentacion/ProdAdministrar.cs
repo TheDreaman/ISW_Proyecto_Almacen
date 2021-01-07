@@ -69,29 +69,20 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form Agregar = new VentanaAgregar();
-                Agregar.Show();
-               
-        
+            Form NewForm = new VentanaAgregar();
+            NewForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form Agregar2 = new NuevoVentana();
-
-            Agregar2.Show();
-
+            Form NewForm = new NuevoVentana();
+            NewForm.ShowDialog();
         }
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            
-                Form Agregar1 = new EliminarVentana();
-
-
-                Agregar1.Show();
-
-   
+            Form NewForm = new EliminarVentana();
+            NewForm.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -105,6 +96,16 @@ namespace Presentacion
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+            string query = "Select * from Productos";
+            SqlCommand comando = new SqlCommand(query, conexion);
+            SqlDataAdapter data = new SqlDataAdapter(comando);
+            DataTable tablaP = new DataTable();
+            data.Fill(tablaP);
+            dataGridView1.DataSource = tablaP;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             string query = "Select * from Productos";
             SqlCommand comando = new SqlCommand(query, conexion);

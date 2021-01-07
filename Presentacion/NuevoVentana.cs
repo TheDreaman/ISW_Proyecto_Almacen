@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -17,11 +19,15 @@ namespace Presentacion
         SqlConnection conexion = new SqlConnection(conexionstring);/// <summary>
         //pruenaaaaaaaaaaaaaaaa
         /// </summary>
+        /// 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
         public NuevoVentana()
         {
             InitializeComponent();
             conexion.Open();
-
+            InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,6 +74,23 @@ namespace Presentacion
         private void NuevoVentana_Load(object sender, EventArgs e)
         {
 
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
+        private void NuevoVentana_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

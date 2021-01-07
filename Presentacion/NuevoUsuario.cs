@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Auxiliar.Cache;
 using Dominio;
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -17,11 +18,15 @@ namespace Presentacion
     {
         NVConexion c = new NVConexion();
         private bool editar = false;
-        private readonly DataGridView mostrarusu;
+        //private readonly DataGridView mostrarusu;
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
 
         public NuevoUsuario()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +52,7 @@ namespace Presentacion
                     
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Ingrese un usuario valido.");
                 Close();
@@ -133,6 +138,17 @@ namespace Presentacion
                 PicNewUser.Image = Image.FromFile(openFileDialog1.FileName);
             }
             
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]            //<----De aqui
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void NuevoUsuario_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 

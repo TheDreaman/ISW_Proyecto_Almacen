@@ -47,40 +47,53 @@
             this.corre2 = new System.Windows.Forms.TextBox();
             this.nomb2 = new System.Windows.Forms.TextBox();
             this.matri2 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.BtnSelecIMGCambio = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.PicCambioUser = new Presentacion.PictureBoxRounded();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicCambioUser)).BeginInit();
             this.SuspendLayout();
             // 
             // car2
             // 
-            this.car2.Location = new System.Drawing.Point(107, 392);
+            this.car2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.car2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.car2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.car2.ForeColor = System.Drawing.Color.White;
+            this.car2.Location = new System.Drawing.Point(117, 385);
             this.car2.Name = "car2";
-            this.car2.Size = new System.Drawing.Size(203, 20);
+            this.car2.Size = new System.Drawing.Size(276, 20);
             this.car2.TabIndex = 63;
+            this.car2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ape2
             // 
-            this.ape2.Location = new System.Drawing.Point(107, 173);
+            this.ape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.ape2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ape2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ape2.ForeColor = System.Drawing.Color.White;
+            this.ape2.Location = new System.Drawing.Point(117, 161);
             this.ape2.Name = "ape2";
             this.ape2.Size = new System.Drawing.Size(276, 20);
             this.ape2.TabIndex = 62;
+            this.ape2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nusu2
             // 
-            this.nusu2.Location = new System.Drawing.Point(107, 255);
+            this.nusu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.nusu2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nusu2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nusu2.ForeColor = System.Drawing.Color.White;
+            this.nusu2.Location = new System.Drawing.Point(117, 254);
             this.nusu2.Name = "nusu2";
             this.nusu2.Size = new System.Drawing.Size(276, 20);
             this.nusu2.TabIndex = 61;
+            this.nusu2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cargo2
             // 
             this.cargo2.AutoSize = true;
             this.cargo2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cargo2.Location = new System.Drawing.Point(37, 392);
+            this.cargo2.Location = new System.Drawing.Point(48, 385);
             this.cargo2.Name = "cargo2";
             this.cargo2.Size = new System.Drawing.Size(51, 20);
             this.cargo2.TabIndex = 60;
@@ -90,7 +103,7 @@
             // 
             this.apellido2.AutoSize = true;
             this.apellido2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido2.Location = new System.Drawing.Point(21, 173);
+            this.apellido2.Location = new System.Drawing.Point(32, 161);
             this.apellido2.Name = "apellido2";
             this.apellido2.Size = new System.Drawing.Size(67, 20);
             this.apellido2.TabIndex = 59;
@@ -99,9 +112,9 @@
             // NUsuario2
             // 
             this.NUsuario2.AutoSize = true;
-            this.NUsuario2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.NUsuario2.BackColor = System.Drawing.Color.Transparent;
             this.NUsuario2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUsuario2.Location = new System.Drawing.Point(18, 244);
+            this.NUsuario2.Location = new System.Drawing.Point(25, 246);
             this.NUsuario2.Name = "NUsuario2";
             this.NUsuario2.Size = new System.Drawing.Size(83, 40);
             this.NUsuario2.TabIndex = 58;
@@ -109,22 +122,27 @@
             // 
             // Roles2
             // 
+            this.Roles2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.Roles2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Roles2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Roles2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Roles2.ForeColor = System.Drawing.Color.White;
             this.Roles2.FormattingEnabled = true;
             this.Roles2.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
-            this.Roles2.Location = new System.Drawing.Point(107, 340);
+            this.Roles2.Location = new System.Drawing.Point(117, 338);
             this.Roles2.Name = "Roles2";
-            this.Roles2.Size = new System.Drawing.Size(203, 21);
+            this.Roles2.Size = new System.Drawing.Size(276, 28);
             this.Roles2.TabIndex = 57;
             // 
             // TitulodeVentana2
             // 
             this.TitulodeVentana2.AutoSize = true;
-            this.TitulodeVentana2.Font = new System.Drawing.Font("DIN", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitulodeVentana2.Location = new System.Drawing.Point(250, 20);
+            this.TitulodeVentana2.Font = new System.Drawing.Font("DIN", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitulodeVentana2.Location = new System.Drawing.Point(266, 9);
             this.TitulodeVentana2.Name = "TitulodeVentana2";
-            this.TitulodeVentana2.Size = new System.Drawing.Size(255, 46);
+            this.TitulodeVentana2.Size = new System.Drawing.Size(269, 46);
             this.TitulodeVentana2.TabIndex = 56;
             this.TitulodeVentana2.Text = "Editar Usuario";
             this.TitulodeVentana2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitulodeVentana2_MouseMove);
@@ -133,7 +151,7 @@
             // 
             this.Contraseña2.AutoSize = true;
             this.Contraseña2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contraseña2.Location = new System.Drawing.Point(12, 299);
+            this.Contraseña2.Location = new System.Drawing.Point(22, 297);
             this.Contraseña2.Name = "Contraseña2";
             this.Contraseña2.Size = new System.Drawing.Size(89, 20);
             this.Contraseña2.TabIndex = 55;
@@ -143,7 +161,7 @@
             // 
             this.Correo2.AutoSize = true;
             this.Correo2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo2.Location = new System.Drawing.Point(31, 216);
+            this.Correo2.Location = new System.Drawing.Point(32, 205);
             this.Correo2.Name = "Correo2";
             this.Correo2.Size = new System.Drawing.Size(57, 20);
             this.Correo2.TabIndex = 54;
@@ -153,7 +171,7 @@
             // 
             this.Nombre2.AutoSize = true;
             this.Nombre2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre2.Location = new System.Drawing.Point(21, 134);
+            this.Nombre2.Location = new System.Drawing.Point(32, 111);
             this.Nombre2.Name = "Nombre2";
             this.Nombre2.Size = new System.Drawing.Size(67, 20);
             this.Nombre2.TabIndex = 53;
@@ -163,7 +181,7 @@
             // 
             this.Rol2.AutoSize = true;
             this.Rol2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rol2.Location = new System.Drawing.Point(55, 341);
+            this.Rol2.Location = new System.Drawing.Point(66, 342);
             this.Rol2.Name = "Rol2";
             this.Rol2.Size = new System.Drawing.Size(33, 20);
             this.Rol2.TabIndex = 51;
@@ -173,7 +191,7 @@
             // 
             this.M2.AutoSize = true;
             this.M2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M2.Location = new System.Drawing.Point(12, 97);
+            this.M2.Location = new System.Drawing.Point(32, 67);
             this.M2.Name = "M2";
             this.M2.Size = new System.Drawing.Size(76, 20);
             this.M2.TabIndex = 50;
@@ -181,13 +199,15 @@
             // 
             // Cancelar2
             // 
-            this.Cancelar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Cancelar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Cancelar2.FlatAppearance.BorderSize = 0;
+            this.Cancelar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Cancelar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.Cancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancelar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancelar2.Location = new System.Drawing.Point(647, 399);
+            this.Cancelar2.Font = new System.Drawing.Font("DIN", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelar2.Location = new System.Drawing.Point(605, 371);
             this.Cancelar2.Name = "Cancelar2";
-            this.Cancelar2.Size = new System.Drawing.Size(141, 40);
+            this.Cancelar2.Size = new System.Drawing.Size(158, 39);
             this.Cancelar2.TabIndex = 49;
             this.Cancelar2.Text = "Cancelar";
             this.Cancelar2.UseVisualStyleBackColor = false;
@@ -195,63 +215,79 @@
             // 
             // AgregarUsuario2
             // 
-            this.AgregarUsuario2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AgregarUsuario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.AgregarUsuario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.AgregarUsuario2.FlatAppearance.BorderSize = 0;
+            this.AgregarUsuario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.AgregarUsuario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.AgregarUsuario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AgregarUsuario2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgregarUsuario2.Location = new System.Drawing.Point(399, 400);
+            this.AgregarUsuario2.Font = new System.Drawing.Font("DIN", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarUsuario2.Location = new System.Drawing.Point(441, 373);
             this.AgregarUsuario2.Name = "AgregarUsuario2";
-            this.AgregarUsuario2.Size = new System.Drawing.Size(141, 39);
+            this.AgregarUsuario2.Size = new System.Drawing.Size(158, 39);
             this.AgregarUsuario2.TabIndex = 48;
-            this.AgregarUsuario2.Text = "Guardar Cambios";
+            this.AgregarUsuario2.Text = "Guardar ";
             this.AgregarUsuario2.UseVisualStyleBackColor = false;
             this.AgregarUsuario2.Click += new System.EventHandler(this.AgregarUsuario2_Click);
             // 
             // contrase2
             // 
-            this.contrase2.Location = new System.Drawing.Point(107, 299);
+            this.contrase2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.contrase2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contrase2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contrase2.ForeColor = System.Drawing.Color.White;
+            this.contrase2.Location = new System.Drawing.Point(117, 297);
             this.contrase2.Name = "contrase2";
             this.contrase2.Size = new System.Drawing.Size(276, 20);
             this.contrase2.TabIndex = 46;
+            this.contrase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // corre2
             // 
-            this.corre2.Location = new System.Drawing.Point(107, 216);
+            this.corre2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.corre2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.corre2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.corre2.ForeColor = System.Drawing.Color.White;
+            this.corre2.Location = new System.Drawing.Point(117, 205);
             this.corre2.Name = "corre2";
             this.corre2.Size = new System.Drawing.Size(276, 20);
             this.corre2.TabIndex = 45;
+            this.corre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nomb2
             // 
-            this.nomb2.Location = new System.Drawing.Point(107, 134);
+            this.nomb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.nomb2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nomb2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomb2.ForeColor = System.Drawing.Color.White;
+            this.nomb2.Location = new System.Drawing.Point(117, 111);
             this.nomb2.Name = "nomb2";
             this.nomb2.Size = new System.Drawing.Size(276, 20);
             this.nomb2.TabIndex = 44;
+            this.nomb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // matri2
             // 
-            this.matri2.Location = new System.Drawing.Point(107, 97);
+            this.matri2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.matri2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.matri2.Font = new System.Drawing.Font("DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matri2.ForeColor = System.Drawing.Color.White;
+            this.matri2.Location = new System.Drawing.Point(117, 67);
             this.matri2.Name = "matri2";
             this.matri2.Size = new System.Drawing.Size(276, 20);
             this.matri2.TabIndex = 43;
+            this.matri2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.matri2.TextChanged += new System.EventHandler(this.matri2_TextChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.TitulodeVentana2);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 74);
-            this.panel1.TabIndex = 64;
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // BtnSelecIMGCambio
             // 
-            this.BtnSelecIMGCambio.BackColor = System.Drawing.Color.Black;
+            this.BtnSelecIMGCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.BtnSelecIMGCambio.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.BtnSelecIMGCambio.FlatAppearance.BorderSize = 0;
+            this.BtnSelecIMGCambio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtnSelecIMGCambio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.BtnSelecIMGCambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSelecIMGCambio.Font = new System.Drawing.Font("DIN", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSelecIMGCambio.Font = new System.Drawing.Font("DIN", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSelecIMGCambio.Location = new System.Drawing.Point(475, 342);
             this.BtnSelecIMGCambio.Name = "BtnSelecIMGCambio";
             this.BtnSelecIMGCambio.Size = new System.Drawing.Size(250, 23);
@@ -266,6 +302,7 @@
             // 
             // PicCambioUser
             // 
+            this.PicCambioUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.PicCambioUser.Location = new System.Drawing.Point(475, 84);
             this.PicCambioUser.Name = "PicCambioUser";
             this.PicCambioUser.Size = new System.Drawing.Size(250, 250);
@@ -278,11 +315,11 @@
             this.AcceptButton = this.AgregarUsuario2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TitulodeVentana2);
             this.Controls.Add(this.BtnSelecIMGCambio);
             this.Controls.Add(this.PicCambioUser);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.car2);
             this.Controls.Add(this.ape2);
             this.Controls.Add(this.nusu2);
@@ -304,11 +341,11 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VEditar";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VEditar";
             this.Load += new System.EventHandler(this.VEditar_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VEditar_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.PicCambioUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -336,7 +373,6 @@
         public System.Windows.Forms.TextBox corre2;
         public System.Windows.Forms.TextBox nomb2;
         public System.Windows.Forms.TextBox matri2;
-        private System.Windows.Forms.Panel panel1;
         private PictureBoxRounded PicCambioUser;
         private System.Windows.Forms.Button BtnSelecIMGCambio;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

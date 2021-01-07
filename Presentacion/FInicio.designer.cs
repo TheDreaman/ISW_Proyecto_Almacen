@@ -35,7 +35,6 @@
             this.BtMax = new System.Windows.Forms.PictureBox();
             this.BtCerrar = new System.Windows.Forms.PictureBox();
             this.LeftMenu = new System.Windows.Forms.Panel();
-            this.ImgUser = new Presentacion.PictureBoxRounded();
             this.TxtRol = new System.Windows.Forms.Label();
             this.BtLogout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,15 +49,16 @@
             this.BtReportes = new System.Windows.Forms.Button();
             this.BtProductos = new System.Windows.Forms.Button();
             this.Contenido = new System.Windows.Forms.Panel();
+            this.ImgUser = new Presentacion.PictureBoxRounded();
             this.TopBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtCerrar)).BeginInit();
             this.LeftMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
             this.PSubreportes.SuspendLayout();
             this.PSubProductos1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).BeginInit();
             this.SuspendLayout();
             // 
             // TopBarra
@@ -144,17 +144,6 @@
             this.LeftMenu.Name = "LeftMenu";
             this.LeftMenu.Size = new System.Drawing.Size(220, 626);
             this.LeftMenu.TabIndex = 1;
-            // 
-            // ImgUser
-            // 
-            this.ImgUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ImgUser.Location = new System.Drawing.Point(0, 9);
-            this.ImgUser.Name = "ImgUser";
-            this.ImgUser.Size = new System.Drawing.Size(220, 180);
-            this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgUser.TabIndex = 0;
-            this.ImgUser.TabStop = false;
-            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click_1);
             // 
             // TxtRol
             // 
@@ -355,6 +344,17 @@
             this.Contenido.Size = new System.Drawing.Size(1080, 626);
             this.Contenido.TabIndex = 2;
             // 
+            // ImgUser
+            // 
+            this.ImgUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImgUser.Location = new System.Drawing.Point(23, 9);
+            this.ImgUser.Name = "ImgUser";
+            this.ImgUser.Size = new System.Drawing.Size(180, 180);
+            this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgUser.TabIndex = 0;
+            this.ImgUser.TabStop = false;
+            this.ImgUser.Click += new System.EventHandler(this.ImgUser_Click_1);
+            // 
             // FInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,9 +375,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtCerrar)).EndInit();
             this.LeftMenu.ResumeLayout(false);
             this.LeftMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
             this.PSubreportes.ResumeLayout(false);
             this.PSubProductos1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImgUser)).EndInit();
             this.ResumeLayout(false);
 
         }

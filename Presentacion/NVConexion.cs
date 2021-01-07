@@ -49,7 +49,7 @@ namespace Presentacion
                 }
               
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 MessageBox.Show("No se registro."); 
             }
@@ -149,7 +149,7 @@ namespace Presentacion
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("No se actualizo.");  //manda mesaje en una ventana
             }

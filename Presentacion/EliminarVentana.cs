@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -17,6 +17,9 @@ namespace Presentacion
     {
         static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";//Server 
         SqlConnection conexion = new SqlConnection(conexionstring);
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
         public EliminarVentana()
         {
             InitializeComponent();
@@ -24,13 +27,11 @@ namespace Presentacion
             textBox2.Visible = false;
             textBox4.Visible = false;
             button1.Visible = false;
-           
-           
+ 
             label4.Visible = false;
             label5.Visible = false;
-           
-            
 
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -90,6 +91,22 @@ namespace Presentacion
             }
 
             conexion.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void EliminarVentana_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
