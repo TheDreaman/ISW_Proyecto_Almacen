@@ -91,6 +91,11 @@
     <Compile Include="Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetMovimientoFecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMovimientoFecha.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EliminarVentana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +217,7 @@
     <EmbeddedResource Include="ReporteMovimientos.resx">
       <DependentUpon>ReporteMovimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportMovimienrosFecha.rdlc" />
     <EmbeddedResource Include="VEditar.resx">
       <DependentUpon>VEditar.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +227,17 @@
     <EmbeddedResource Include="VentanaAgregar.resx">
       <DependentUpon>VentanaAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetMovimientoFecha.xsc">
+      <DependentUpon>DataSetMovimientoFecha.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMovimientoFecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMovimientoFecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetMovimientoFecha.xss">
+      <DependentUpon>DataSetMovimientoFecha.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
