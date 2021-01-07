@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Auxiliar.Cache;
 using System.IO;
 using System.Runtime.InteropServices;
+using Dominio;
 
 namespace Presentacion
 {
@@ -34,19 +35,18 @@ namespace Presentacion
         {
             try
             {
-                LoginCache.Picture2 = null;
-                Stream mystream = openFileDialog1.OpenFile();
-                using (MemoryStream ms = new MemoryStream())
+                if (openFileDialog1.FileName != LoginCache.URL)
                 {
-                    mystream.CopyTo(ms);
-                    LoginCache.Picture2 = ms.ToArray();
+                    ModeloUsuario user2 = new ModeloUsuario();
+                    LoginCache.Picture2 = user2.ConsultaIMGMatri(Convert.ToInt32(matri2.Text));
+
                 }
                 c.actualizar(Convert.ToInt32(matri2.Text), nusu2.Text, contrase2.Text, nomb2.Text, ape2.Text, Roles2.Text, corre2.Text, car2.Text);
                 Close();
-           }
-           catch (Exception)
+            }
+            catch (Exception)
             {
-                MessageBox.Show("Verifique si están bien los datos ingresados.");
+                MessageBox.Show("Verifique si están bien los datos ingresados1.");
             }
         }
 
@@ -127,6 +127,12 @@ namespace Presentacion
             {
                 LoginCache.URL = openFileDialog1.FileName;
                 PicCambioUser.Image = Image.FromFile(openFileDialog1.FileName);
+                Stream mystream = openFileDialog1.OpenFile();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    mystream.CopyTo(ms);
+                    LoginCache.Picture2 = ms.ToArray();
+                }
             }
         }
 
@@ -139,9 +145,6 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-
         }
     }
 }
-
-
