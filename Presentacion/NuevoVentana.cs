@@ -14,7 +14,9 @@ namespace Presentacion
     public partial class NuevoVentana : Form
     {
         static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";//server
-        SqlConnection conexion = new SqlConnection(conexionstring);
+        SqlConnection conexion = new SqlConnection(conexionstring);/// <summary>
+        //pruenaaaaaaaaaaaaaaaa
+        /// </summary>
         public NuevoVentana()
         {
             InitializeComponent();
