@@ -26,7 +26,7 @@ namespace Presentacion.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=Almacen;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=.;DataBase= Almacen;integrated security= true")]
         public string AlmacenConnectionString {
             get {
                 return ((string)(this["AlmacenConnectionString"]));

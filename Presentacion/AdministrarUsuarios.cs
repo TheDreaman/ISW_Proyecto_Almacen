@@ -16,6 +16,7 @@ namespace Presentacion
     {
         public AdministrarUsuarios()
         {
+
             InitializeComponent();
             NVConexion c = new NVConexion();
             c.Mostrarusuario(mostrarusu);

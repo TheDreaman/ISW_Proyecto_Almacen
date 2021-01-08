@@ -152,10 +152,26 @@ namespace Presentacion                                             //agregados d
 
         public void VerIMGPerfil(PictureBox Pic)
         {
-            ModeloUsuario user = new ModeloUsuario();
-            user.ConsultaIMG(LoginCache.ID);
-            System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Picture);
-            Pic.Image = System.Drawing.Bitmap.FromStream(MStream);
+            if (ImgUser.Image == null)
+            {
+                NVConexion c = new NVConexion();
+                LoginCache.Pictureemergency = ImageToByte(Properties.Resources.eladmin);
+                c.actualizardefault(LoginCache.ID);
+                System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Pictureemergency);
+                Pic.Image = System.Drawing.Bitmap.FromStream(MStream);  
+            }
+            else
+            {
+                System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Picture);
+                Pic.Image = System.Drawing.Bitmap.FromStream(MStream);
+            }
+            
+        }
+
+        public static byte[] ImageToByte(Image img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
 
         private void button3_Click(object sender, EventArgs e)

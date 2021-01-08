@@ -26,7 +26,7 @@ namespace Presentacion
         {
             try
             {
-                cn = new SqlConnection("Data Source=.;Initial Catalog=Almacen;Integrated Security=True"); //cambiar a la direccion de su base de datos
+                cn = new SqlConnection("Server=.;DataBase= Almacen;integrated security= true"); //cambiar a la direccion de su base de datos
                 cn.Open();
             }
             catch (Exception ex)
@@ -154,6 +154,13 @@ namespace Presentacion
                 MessageBox.Show("No se actualizo.");  //manda mesaje en una ventana
             }
             
+        }
+
+        public void actualizardefault(int ID)
+        {
+            cmd = new SqlCommand("Update Users set Picture=@Pic where ID = " + ID + "", cn);
+            cmd.Parameters.AddWithValue("@Pic", LoginCache.Pictureemergency);
+            cmd.ExecuteNonQuery();
         }
 
         public string eliminar(int mat)

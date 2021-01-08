@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Kevin\Desktop\Proyecto ISW EXE\</PublishUrl>
+    <PublishUrl>C:\Users\josue\Desktop\IC\6° Semestre\Ingenieria en software\Proyecto Final\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -58,7 +58,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>CEC54EBDF2439E28DBCDE255EB0AF78D8DB3FECD</ManifestCertificateThumbprint>
@@ -318,6 +318,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icono1.ico" />
+    <None Include="Resources\defaultimg.png" />
+    <None Include="Resources\eladmin.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

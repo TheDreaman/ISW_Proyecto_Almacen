@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Dominio;
+using System.IO;
+using Auxiliar.Cache;
 
 namespace Presentacion
 {
@@ -95,6 +97,8 @@ namespace Presentacion
         {
             Login();
         }
+
+
 
         private void msgError(string msg)                       //Metodo vacio que sirve para mostrar los mensajes
         {                                                       //de error
