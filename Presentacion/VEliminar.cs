@@ -44,20 +44,20 @@ namespace Presentacion
             {
                 if (c.personaRegistrada(Convert.ToInt32(EliminarM.Text)) == 0)
                 {
-                    MessageBox.Show("El usuario no existe.");
+                    c.MessageBoxBlack("El usuario no existe.");
                     Close();
                 }
                 else
                 {
                      c.eliminar(Convert.ToInt32(EliminarM.Text));
-                    MessageBox.Show("Usuario Eliminado.");
+                    c.MessageBoxBlack("Usuario Eliminado.");
                     Close();
                 }
                     
             }
             catch(Exception)
             {
-                MessageBox.Show("Verifique si están bien los datos ingresados.");
+                c.MessageBoxBlack("Verifique si están bien los datos ingresados.");
             }
         }
 

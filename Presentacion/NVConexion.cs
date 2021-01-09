@@ -21,6 +21,7 @@ namespace Presentacion
         SqlDataReader dr;
         SqlDataAdapter da;
         DataTable dt;
+        MessageBoxCustom MessageBoxCustom = new MessageBoxCustom();
 
         public NVConexion()
         {
@@ -31,7 +32,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se conecto a la base de datos." + ex.ToString());
+                MessageBoxBlack("No se conecto a la base de datos." + ex.ToString());
             }
         }
 
@@ -45,15 +46,37 @@ namespace Presentacion
                     cmd = new SqlCommand("Insert into Users(Matricula,UserName,Password,Name1,Apellido,Rol,Email,Picture,Cargo) values(" + mat + ",'" + userna + "','" + contraseña + "','" + nombr + "','" + apelli + "','" + rol + "','" + correo + "',@Pic ,'" + carg + "')", cn);
                     cmd.Parameters.AddWithValue("@Pic", LoginCache.Picture2);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Usuario Agregado.");
+                    MessageBoxBlack("Usuario Agregado.");
                 }
               
             }
             catch (Exception )
             {
-                MessageBox.Show("No se registro."); 
+                MessageBoxBlack("No se registro."); 
             }
             
+        }
+
+        public void InsertarsinIMG(int mat, string userna, string contraseña, string nombr, string apelli, string rol, string correo, string carg)
+        {
+
+            try
+            {
+                if ((userna != "") || (contraseña != "") || (nombr != "") || (apelli != "") || (rol != "") || (correo != "") || (carg != ""))
+                {
+                    cmd = new SqlCommand("Insert into Users(Matricula,UserName,Password,Name1,Apellido,Rol,Email,Picture,Cargo) values(" + mat + ",'" + userna + "','" + contraseña + "','" + nombr + "','" + apelli + "','" + rol + "','" + correo + "',@Pic ,'" + carg + "')", cn);
+                    cmd.Parameters.AddWithValue("@Pic", LoginCache.Pictureemergency);
+                    cmd.ExecuteNonQuery();
+                    MessageBoxBlack("Usuario Agregado.");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBoxBlack("No se registro.");
+            }
+
         }
 
         internal void insertarimagen(string pic)
@@ -76,7 +99,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ya esta Registrado." + ex.ToString());
+                MessageBoxBlack("Ya esta Registrado." + ex.ToString());
             }
             return contador;
         }
@@ -92,7 +115,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo llenar." + ex.ToString());
+                MessageBoxBlack("No se puedo llenar." + ex.ToString());
             }
         }
 
@@ -121,7 +144,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo llenar los campos." + ex.ToString());
+                MessageBoxBlack("No se pudo llenar los campos." + ex.ToString());
             }
         }
 
@@ -138,20 +161,22 @@ namespace Presentacion
             {
                 if ((usuario == "") || (con == "") || (nombre == "") || (apellido == "") || (rol == "") || (correo == "") || (cargo == ""))
                 {
-                    MessageBox.Show("Verifique si están bien los datos ingresados.");
+                    MessageBoxBlack("Verifique si están bien los datos ingresados.");
                 }
                 else
                 {
                     cmd = new SqlCommand("Update Users set UserName='" + usuario + "', Password='" + con + "', Name1='" + nombre + "',Apellido='" + apellido + "', Rol='" + rol + "', Email='" + correo + "', Picture=@Pic, Cargo='" + cargo + "' where Matricula=" + matric + "", cn);
                     cmd.Parameters.AddWithValue("@Pic", LoginCache.Picture2);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Datos actualizados.");
+                    //MessageBox.Show("Datos actualizados.");
+                    MessageBoxBlack("Datos actualizados");
                 }
                 
             }
             catch (Exception)
             {
-                MessageBox.Show("No se actualizo.");  //manda mesaje en una ventana
+                // MessageBox.Show("No se actualizo.");  //manda mesaje en una ventana
+                MessageBoxBlack("No se actualizo");
             }
             
         }
@@ -195,6 +220,12 @@ namespace Presentacion
                 mensaje = "No se inserto la imagen" + ex.ToString();
             }
             return mensaje;
+        }
+
+        public void MessageBoxBlack(string msg)
+        {
+            MessageBoxCustom.Mensaje.Text = "       " + msg;
+            MessageBoxCustom.ShowDialog();
         }
     }
 }

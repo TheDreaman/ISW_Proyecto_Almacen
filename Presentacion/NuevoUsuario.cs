@@ -36,25 +36,34 @@ namespace Presentacion
 
                 if (c.personaRegistrada(Convert.ToInt32(matri.Text)) == 0)
                 {
-                    LoginCache.Picture2 = null;
-                    Stream mystream = openFileDialog1.OpenFile();
-                    using (MemoryStream ms = new MemoryStream())
+                    try
                     {
-                        mystream.CopyTo(ms);
-                        LoginCache.Picture2 = ms.ToArray();
+                        LoginCache.Picture2 = null;
+                        Stream mystream = openFileDialog1.OpenFile();
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            mystream.CopyTo(ms);
+                            LoginCache.Picture2 = ms.ToArray();
+                        }
+                        c.Insertar(Convert.ToInt32(matri.Text), nusu.Text, contrase.Text, nomb.Text, ape.Text, Roles.Text, corre.Text, car.Text);   //muestra un mensaje
+                        Close();
                     }
-                    c.Insertar(Convert.ToInt32(matri.Text), nusu.Text, contrase.Text, nomb.Text, ape.Text, Roles.Text, corre.Text, car.Text);   //muestra un mensaje
-                    Close();
+                    catch
+                    {
+                        c.InsertarsinIMG(Convert.ToInt32(matri.Text), nusu.Text, contrase.Text, nomb.Text, ape.Text, Roles.Text, corre.Text, car.Text);   //muestra un mensaje
+                        Close();
+                    }
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Ya esta Registrado.");
+                    c.MessageBoxBlack("Ya esta Registrado.");
                     
                 }
             }
             catch(Exception)
             {
-                MessageBox.Show("Ingrese un usuario valido.");
+                c.MessageBoxBlack("Ingrese un usuario valido.");
                 Close();
                
             }

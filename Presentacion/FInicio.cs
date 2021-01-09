@@ -22,6 +22,7 @@ namespace Presentacion                                             //agregados d
 
         private void FInicio_Load(object sender, EventArgs e)
         {
+            LoginCache.Pictureemergency = ImageToByte(Properties.Resources.eladmin);
             AbrirPestana(new Bienvenida());
             VerIMGPerfil(ImgUser);
             MsgRol();
@@ -152,20 +153,26 @@ namespace Presentacion                                             //agregados d
 
         public void VerIMGPerfil(PictureBox Pic)
         {
-            if (ImgUser.Image == null)
+            ModeloUsuario user = new ModeloUsuario();
+            user.ConsultaIMG(LoginCache.ID);
+            System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Picture);
+            try
+            {
+                Pic.Image = System.Drawing.Bitmap.FromStream(MStream);          
+            }
+            catch
             {
                 NVConexion c = new NVConexion();
-                LoginCache.Pictureemergency = ImageToByte(Properties.Resources.eladmin);
                 c.actualizardefault(LoginCache.ID);
-                System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Pictureemergency);
-                Pic.Image = System.Drawing.Bitmap.FromStream(MStream);  
-            }
-            else
-            {
-                System.IO.MemoryStream MStream = new System.IO.MemoryStream(LoginCache.Picture);
-                Pic.Image = System.Drawing.Bitmap.FromStream(MStream);
+                System.IO.MemoryStream MStream2 = new System.IO.MemoryStream(LoginCache.Pictureemergency);
+                Pic.Image = System.Drawing.Bitmap.FromStream(MStream2);  
             }
             
+        }
+
+        public void ActualizarIMGPerfil()
+        {
+            VerIMGPerfil(ImgUser);
         }
 
         public static byte[] ImageToByte(Image img)
@@ -194,6 +201,7 @@ namespace Presentacion                                             //agregados d
         private void ImgUser_Click_1(object sender, EventArgs e)
         {
             AbrirPestana(new Bienvenida());
+            VerIMGPerfil(ImgUser);
             BtAdministrarPro.Width = 250; //on=217 off=250
             BtRepoInv.Width = 250;
             BtReporteMov.Width = 250;

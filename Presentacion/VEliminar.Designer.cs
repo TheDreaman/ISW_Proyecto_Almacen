@@ -44,7 +44,7 @@
             this.EliminarM.Location = new System.Drawing.Point(135, 128);
             this.EliminarM.Name = "EliminarM";
             this.EliminarM.Size = new System.Drawing.Size(255, 20);
-            this.EliminarM.TabIndex = 9;
+            this.EliminarM.TabIndex = 0;
             this.EliminarM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.EliminarM.TextChanged += new System.EventHandler(this.EliminarM_TextChanged);
             // 
@@ -85,7 +85,7 @@
             this.cancelarE.Location = new System.Drawing.Point(284, 211);
             this.cancelarE.Name = "cancelarE";
             this.cancelarE.Size = new System.Drawing.Size(158, 39);
-            this.cancelarE.TabIndex = 6;
+            this.cancelarE.TabIndex = 2;
             this.cancelarE.Text = "Cancelar";
             this.cancelarE.UseVisualStyleBackColor = false;
             this.cancelarE.Click += new System.EventHandler(this.cancelarE_Click);
@@ -103,7 +103,7 @@
             this.MEliminar.Location = new System.Drawing.Point(57, 211);
             this.MEliminar.Name = "MEliminar";
             this.MEliminar.Size = new System.Drawing.Size(158, 39);
-            this.MEliminar.TabIndex = 5;
+            this.MEliminar.TabIndex = 1;
             this.MEliminar.Text = "Eliminar";
             this.MEliminar.UseVisualStyleBackColor = false;
             this.MEliminar.Click += new System.EventHandler(this.MEliminar_Click);

@@ -17,6 +17,7 @@ namespace Presentacion
     {
         static string conexionstring = "Server=.;DataBase= Almacen;integrated security= true";//server
         SqlConnection conexion = new SqlConnection(conexionstring);/// <summary>
+        NVConexion c = new NVConexion();
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int width, int height);
@@ -32,7 +33,7 @@ namespace Presentacion
         {
             if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
             {
-                MessageBox.Show("Debes llenar todos los campos de texto. ");
+                c.MessageBoxBlack("Debes llenar todos los campos de texto. ");
                 string query = "Insert into Productos ([Cantidad],[ID_Producto],[Nombre_Producto],[Proveedor],[Merma]) values ('" + numericUpDown1.Value + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','0')";
                 SqlCommand comando = new SqlCommand(query, conexion);
 

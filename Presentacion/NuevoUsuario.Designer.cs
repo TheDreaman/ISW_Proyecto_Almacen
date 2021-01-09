@@ -98,7 +98,7 @@
             this.contrase.Location = new System.Drawing.Point(117, 297);
             this.contrase.Name = "contrase";
             this.contrase.Size = new System.Drawing.Size(276, 20);
-            this.contrase.TabIndex = 4;
+            this.contrase.TabIndex = 5;
             this.contrase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AgregarUsuario
@@ -113,7 +113,7 @@
             this.AgregarUsuario.Location = new System.Drawing.Point(442, 375);
             this.AgregarUsuario.Name = "AgregarUsuario";
             this.AgregarUsuario.Size = new System.Drawing.Size(158, 39);
-            this.AgregarUsuario.TabIndex = 6;
+            this.AgregarUsuario.TabIndex = 9;
             this.AgregarUsuario.Text = "Agregar ";
             this.AgregarUsuario.UseVisualStyleBackColor = false;
             this.AgregarUsuario.Click += new System.EventHandler(this.button1_Click);
@@ -129,7 +129,7 @@
             this.Cancelar.Location = new System.Drawing.Point(606, 375);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(158, 39);
-            this.Cancelar.TabIndex = 7;
+            this.Cancelar.TabIndex = 10;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = false;
             this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
@@ -209,7 +209,7 @@
             this.Roles.Location = new System.Drawing.Point(117, 338);
             this.Roles.Name = "Roles";
             this.Roles.Size = new System.Drawing.Size(276, 28);
-            this.Roles.TabIndex = 15;
+            this.Roles.TabIndex = 6;
             // 
             // car
             // 
@@ -220,7 +220,7 @@
             this.car.Location = new System.Drawing.Point(117, 385);
             this.car.Name = "car";
             this.car.Size = new System.Drawing.Size(276, 20);
-            this.car.TabIndex = 27;
+            this.car.TabIndex = 7;
             this.car.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ape
@@ -232,7 +232,7 @@
             this.ape.Location = new System.Drawing.Point(117, 161);
             this.ape.Name = "ape";
             this.ape.Size = new System.Drawing.Size(276, 20);
-            this.ape.TabIndex = 26;
+            this.ape.TabIndex = 2;
             this.ape.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nusu
@@ -244,7 +244,7 @@
             this.nusu.Location = new System.Drawing.Point(117, 254);
             this.nusu.Name = "nusu";
             this.nusu.Size = new System.Drawing.Size(276, 20);
-            this.nusu.TabIndex = 25;
+            this.nusu.TabIndex = 4;
             this.nusu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cargo
@@ -296,7 +296,7 @@
             this.foto1.Location = new System.Drawing.Point(493, 327);
             this.foto1.Name = "foto1";
             this.foto1.Size = new System.Drawing.Size(250, 31);
-            this.foto1.TabIndex = 29;
+            this.foto1.TabIndex = 8;
             this.foto1.Text = "Seleccionar Foto";
             this.foto1.UseVisualStyleBackColor = false;
             this.foto1.Click += new System.EventHandler(this.foto1_Click);

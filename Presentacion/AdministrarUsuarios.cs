@@ -53,13 +53,15 @@ namespace Presentacion
 
         private void AdministrarUsuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'usersTable.Users' Puede moverla o quitarla según sea necesario.
+            this.usersTableAdapter.Fill(this.usersTable.Users);
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             NVConexion c = new NVConexion();
-            c.Mostrarusuario(mostrarusu);
+            c.Mostrarusuario(mostrarusu);           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

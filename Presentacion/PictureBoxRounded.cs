@@ -8,7 +8,7 @@ using System.Drawing.Drawing2D;
 
 namespace Presentacion
 {
-    class PictureBoxRounded : PictureBox
+    public class PictureBoxRounded : PictureBox
     {
         protected override void OnPaint(PaintEventArgs pe)
         {

@@ -62,7 +62,7 @@
             this.car2.Location = new System.Drawing.Point(117, 385);
             this.car2.Name = "car2";
             this.car2.Size = new System.Drawing.Size(276, 20);
-            this.car2.TabIndex = 63;
+            this.car2.TabIndex = 7;
             this.car2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ape2
@@ -74,7 +74,7 @@
             this.ape2.Location = new System.Drawing.Point(117, 161);
             this.ape2.Name = "ape2";
             this.ape2.Size = new System.Drawing.Size(276, 20);
-            this.ape2.TabIndex = 62;
+            this.ape2.TabIndex = 2;
             this.ape2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nusu2
@@ -86,7 +86,7 @@
             this.nusu2.Location = new System.Drawing.Point(117, 254);
             this.nusu2.Name = "nusu2";
             this.nusu2.Size = new System.Drawing.Size(276, 20);
-            this.nusu2.TabIndex = 61;
+            this.nusu2.TabIndex = 4;
             this.nusu2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cargo2
@@ -134,7 +134,7 @@
             this.Roles2.Location = new System.Drawing.Point(117, 338);
             this.Roles2.Name = "Roles2";
             this.Roles2.Size = new System.Drawing.Size(276, 28);
-            this.Roles2.TabIndex = 57;
+            this.Roles2.TabIndex = 6;
             // 
             // TitulodeVentana2
             // 
@@ -208,7 +208,7 @@
             this.Cancelar2.Location = new System.Drawing.Point(605, 371);
             this.Cancelar2.Name = "Cancelar2";
             this.Cancelar2.Size = new System.Drawing.Size(158, 39);
-            this.Cancelar2.TabIndex = 49;
+            this.Cancelar2.TabIndex = 10;
             this.Cancelar2.Text = "Cancelar";
             this.Cancelar2.UseVisualStyleBackColor = false;
             this.Cancelar2.Click += new System.EventHandler(this.Cancelar2_Click);
@@ -225,7 +225,7 @@
             this.AgregarUsuario2.Location = new System.Drawing.Point(441, 373);
             this.AgregarUsuario2.Name = "AgregarUsuario2";
             this.AgregarUsuario2.Size = new System.Drawing.Size(158, 39);
-            this.AgregarUsuario2.TabIndex = 48;
+            this.AgregarUsuario2.TabIndex = 9;
             this.AgregarUsuario2.Text = "Guardar ";
             this.AgregarUsuario2.UseVisualStyleBackColor = false;
             this.AgregarUsuario2.Click += new System.EventHandler(this.AgregarUsuario2_Click);
@@ -239,7 +239,7 @@
             this.contrase2.Location = new System.Drawing.Point(117, 297);
             this.contrase2.Name = "contrase2";
             this.contrase2.Size = new System.Drawing.Size(276, 20);
-            this.contrase2.TabIndex = 46;
+            this.contrase2.TabIndex = 5;
             this.contrase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // corre2
@@ -251,7 +251,7 @@
             this.corre2.Location = new System.Drawing.Point(117, 205);
             this.corre2.Name = "corre2";
             this.corre2.Size = new System.Drawing.Size(276, 20);
-            this.corre2.TabIndex = 45;
+            this.corre2.TabIndex = 3;
             this.corre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nomb2
@@ -263,7 +263,7 @@
             this.nomb2.Location = new System.Drawing.Point(117, 111);
             this.nomb2.Name = "nomb2";
             this.nomb2.Size = new System.Drawing.Size(276, 20);
-            this.nomb2.TabIndex = 44;
+            this.nomb2.TabIndex = 1;
             this.nomb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // matri2
@@ -275,14 +275,14 @@
             this.matri2.Location = new System.Drawing.Point(117, 67);
             this.matri2.Name = "matri2";
             this.matri2.Size = new System.Drawing.Size(276, 20);
-            this.matri2.TabIndex = 43;
+            this.matri2.TabIndex = 0;
             this.matri2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.matri2.TextChanged += new System.EventHandler(this.matri2_TextChanged);
             // 
             // BtnSelecIMGCambio
             // 
             this.BtnSelecIMGCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.BtnSelecIMGCambio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.BtnSelecIMGCambio.Cursor = System.Windows.Forms.Cursors.Default;
             this.BtnSelecIMGCambio.FlatAppearance.BorderSize = 0;
             this.BtnSelecIMGCambio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.BtnSelecIMGCambio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
@@ -291,7 +291,7 @@
             this.BtnSelecIMGCambio.Location = new System.Drawing.Point(475, 342);
             this.BtnSelecIMGCambio.Name = "BtnSelecIMGCambio";
             this.BtnSelecIMGCambio.Size = new System.Drawing.Size(250, 23);
-            this.BtnSelecIMGCambio.TabIndex = 66;
+            this.BtnSelecIMGCambio.TabIndex = 8;
             this.BtnSelecIMGCambio.Text = "Seleccionar imágen";
             this.BtnSelecIMGCambio.UseVisualStyleBackColor = false;
             this.BtnSelecIMGCambio.Click += new System.EventHandler(this.BtnSelecIMGCambio_Click);

@@ -46,7 +46,7 @@ namespace Presentacion
             }
             catch (Exception)
             {
-                MessageBox.Show("Verifique si están bien los datos ingresados1.");
+                c.MessageBoxBlack("Verifique si están bien los datos ingresados.");
             }
         }
 
@@ -76,7 +76,7 @@ namespace Presentacion
             }
             catch (Exception)
             {
-                MessageBox.Show("Ingrese una matrícula.");
+                c.MessageBoxBlack("Ingrese una matrícula.");
             }
 
         }
